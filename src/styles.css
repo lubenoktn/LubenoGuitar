@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html,body{background:#090d16;color:#f1f5f9}
+.sc::-webkit-scrollbar{height:8px}.sc::-webkit-scrollbar-thumb{background:#334155;border-radius:4px}
+.fw{border-right:2px solid #94a3b8}.nut{border-right:7px solid #e2e8f0}
+.dot{width:11px;height:11px;border-radius:9999px;background:#64748b;opacity:.6;position:absolute;top:100%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.nb{transition:transform .15s}.nb:hover{transform:scale(1.18)}
+@keyframes pg{50%{box-shadow:0 0 18px #f59e0b}}.rg{animation:pg 2.5s infinite}
+.mel{outline:3px solid #fff;transform:scale(1.5);z-index:30}
+.tb.on{border-color:#fbbf24;background:#f59e0b22}
+.bd{width:10px;height:10px;border-radius:9999px;background:#2d3b55}.bd.ac{background:#475569}.bd.on{background:#34d399}.bd.ac.on{background:#f59e0b}
+.tb span.sel{background:#f59e0b;color:#090d16}.ed .tb span{cursor:pointer}.ed .tb span:hover{outline:1px solid #94a3b8}
+.lh .fw{border-right:0;border-left:2px solid #94a3b8}.lh .nut{border-right:0;border-left:7px solid #e2e8f0}
+@media (prefers-reduced-motion:reduce){.rg{animation:none}}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #34d399}

@@ -1,0 +1,206 @@
+// Static content: grooves, presets, track names, interval names and tab articulations.
+import { mk } from './theory.js';
+
+// chord label as displayed
+export const GR = {
+  rock: { n: 'Rock / Pop', m: '4/4', h: [0, 8] },
+  funk: { n: 'Funk', m: '4/4', h: [0, 6, 10, 13], sh: 1 },
+  jazz: { n: 'Jazz swing', m: '4/4', h: [0, 6], sw: 1 },
+  ballad: { n: 'Balada', m: '4/4', h: [0] },
+  shuffle: { n: 'Shuffle', m: '4/4', h: [0, 8], sw: 1 },
+  bossa: { n: 'Bossa nova', m: '4/4', h: [0, 6, 10] },
+  reggae: { n: 'Reggae', m: '4/4', h: [4, 12], sh: 1 },
+  waltz: { n: 'Valčík (3/4)', m: '3/4', h: [4, 8], sh: 1 },
+  b68: { n: 'Balada 6/8', m: '6/8', h: [] },
+};
+// one step; in 6/8 the BPM counts dotted quarters
+export const PRE = {
+  pop: {
+    n: 'Pop / Rock',
+    d: 'C – G – Am – F',
+    bpm: 108,
+    g: 'rock',
+    k: ['C', 'maj'],
+    c: [
+      ['C', 'maj'],
+      ['G', 'maj'],
+      ['A', 'm'],
+      ['F', 'maj'],
+    ],
+  },
+  pach: {
+    n: 'Pachelbelova postupnosť',
+    d: 'D A – Bm F#m – G D – G A',
+    bpm: 72,
+    g: 'ballad',
+    k: ['D', 'maj'],
+    c: [
+      [
+        ['D', 'maj'],
+        ['A', 'maj'],
+      ],
+      [
+        ['B', 'm'],
+        ['F#', 'm'],
+      ],
+      [
+        ['G', 'maj'],
+        ['D', 'maj'],
+      ],
+      [
+        ['G', 'maj'],
+        ['A', 'maj'],
+      ],
+    ],
+  },
+  doo: {
+    n: 'Balada 6/8',
+    d: 'C – Am – F – G',
+    bpm: 60,
+    g: 'b68',
+    k: ['C', 'maj'],
+    c: [
+      ['C', 'maj'],
+      ['A', 'm'],
+      ['F', 'maj'],
+      ['G', 'maj'],
+    ],
+  },
+  jazz: {
+    n: 'Jazz ii–V–I',
+    d: 'Dm7 – G7 – Cmaj7 – A7alt',
+    bpm: 120,
+    g: 'jazz',
+    k: ['C', 'maj'],
+    c: [
+      ['D', 'm7'],
+      ['G', '7'],
+      ['C', 'maj7'],
+      ['A', '7alt'],
+    ],
+  },
+  bossa: {
+    n: 'Bossa nova',
+    d: 'Cmaj7 – D7 – Dm7 – G7',
+    bpm: 130,
+    g: 'bossa',
+    k: ['C', 'maj'],
+    c: [
+      ['C', 'maj7'],
+      ['D', '7'],
+      ['D', 'm7'],
+      ['G', '7'],
+    ],
+  },
+  blues: {
+    n: '12-taktový blues v A',
+    d: 'A7 – D7 – E7',
+    bpm: 92,
+    g: 'shuffle',
+    k: ['A', 'maj'],
+    c: [
+      ['A', '7'],
+      ['D', '7'],
+      ['A', '7'],
+      ['A', '7'],
+      ['D', '7'],
+      ['D', '7'],
+      ['A', '7'],
+      ['A', '7'],
+      ['E', '7'],
+      ['D', '7'],
+      ['A', '7'],
+      ['E', '7'],
+    ],
+  },
+  mblues: {
+    n: 'Molový blues v A',
+    d: 'Am7 – Dm7 – F7 – E7',
+    bpm: 84,
+    g: 'shuffle',
+    k: ['A', 'min'],
+    c: [
+      ['A', 'm7'],
+      ['A', 'm7'],
+      ['A', 'm7'],
+      ['A', 'm7'],
+      ['D', 'm7'],
+      ['D', 'm7'],
+      ['A', 'm7'],
+      ['A', 'm7'],
+      ['F', '7'],
+      ['E', '7'],
+      ['A', 'm7'],
+      ['E', '7'],
+    ],
+  },
+  andal: {
+    n: 'Andalúzska kadencia',
+    d: 'Am – G – F – E7',
+    bpm: 115,
+    g: 'rock',
+    k: ['A', 'min'],
+    c: [
+      ['A', 'm'],
+      ['G', 'maj'],
+      ['F', 'maj'],
+      ['E', '7'],
+    ],
+  },
+  funk: {
+    n: 'Neo-soul / funk',
+    d: 'Dm9 – G13',
+    bpm: 96,
+    g: 'funk',
+    k: ['D', 'min'],
+    c: [
+      ['D', 'm9'],
+      ['G', '13'],
+      ['D', 'm9'],
+      ['G', '13'],
+    ],
+  },
+  reggae: {
+    n: 'Reggae',
+    d: 'Am – Dm – Am – Em',
+    bpm: 140,
+    g: 'reggae',
+    k: ['A', 'min'],
+    c: [
+      ['A', 'm'],
+      ['D', 'm'],
+      ['A', 'm'],
+      ['E', 'm'],
+    ],
+  },
+  waltz: {
+    n: 'Valčík',
+    d: 'C – Am – Dm – G7',
+    bpm: 132,
+    g: 'waltz',
+    k: ['C', 'maj'],
+    c: [
+      ['C', 'maj'],
+      ['A', 'm'],
+      ['D', 'm'],
+      ['G', '7'],
+    ],
+  },
+};
+export const preBars = (p) => p.c.map((e) => (Array.isArray(e[0]) ? e : [e]).map((c) => mk(...c)));
+export const TR = { drums: 'Bicie', bass: 'Basa', chords: 'Akordy', mel: 'Melódia', click: 'Klik' };
+export const ARTS = ['h', 'p', '/', '\\', 'b'];
+export const INT = [
+  'malá sekunda',
+  'veľká sekunda',
+  'malá tercia',
+  'veľká tercia',
+  'čistá kvarta',
+  'tritonus',
+  'čistá kvinta',
+  'malá sexta',
+  'veľká sexta',
+  'malá septima',
+  'veľká septima',
+  'oktáva',
+];
