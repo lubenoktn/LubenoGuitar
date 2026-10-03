@@ -35,7 +35,8 @@ import { drawDias } from './ui/diagrams.js';
 import { FB, setScale } from './ui/fretboard.js';
 import { QZ } from './ui/quiz.js';
 import { fromHash } from './ui/share.js';
-import { ED } from './ui/tab.js';
+import { ED, snap, undo } from './ui/tab.js';
+import { initPwa } from './pwa.js';
 import { TN } from './ui/tuner.js';
 
 // (re)builds every list whose entries are translated, keeping the current selection
@@ -239,6 +240,18 @@ $('tabs').onclick = (e) => {
   if (b) tab(b.dataset.tab);
 };
 addEventListener('keydown', (e) => {
+  const typing = ['INPUT', 'SELECT', 'TEXTAREA'].includes(e.target.tagName);
+  if (
+    (e.ctrlKey || e.metaKey) &&
+    !e.shiftKey &&
+    e.key.toLowerCase() === 'z' &&
+    !typing &&
+    !$('t-backing').classList.contains('hidden')
+  ) {
+    e.preventDefault();
+    undo();
+    return;
+  }
   if (
     ED.on &&
     !QZ.on &&
@@ -343,7 +356,10 @@ $('msound').onchange = (e) => {
   A.resume();
   A.mel(64, A.ctx.currentTime, 0.9, 0.55);
 };
-$('newmel').onclick = () => genMel(true);
+$('newmel').onclick = () => {
+  snap();
+  genMel(true);
+};
 $('mstyle').onchange = () => genAll(true);
 // start: restore the autosaved state, otherwise the defaults; the old single save becomes a slot
 export const old = LS.get('fm1');
@@ -360,7 +376,10 @@ try {
 }
 fromHash();
 // a shared link wins over the autosaved state
+// the groups start folded on phones and open on wider screens
+document.querySelectorAll('details.grp').forEach((d) => (d.open = innerWidth >= 640));
 tab('scales');
+initPwa();
 document.addEventListener('change', touch);
 document.addEventListener('click', touch);
 addEventListener('pagehide', () => LS.set('lg_auto', full()));

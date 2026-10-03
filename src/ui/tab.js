@@ -1,8 +1,9 @@
 // Tablature rendering and the melody editor.
 import { A } from '../audio.js';
-import { $ } from '../dom.js';
+import { $, toast } from '../dom.js';
+import { createHistory } from '../history.js';
 import { L } from '../i18n.js';
-import { SQ, dl } from '../sequencer.js';
+import { SQ, dl, meter } from '../sequencer.js';
 import { touch } from '../state.js';
 import { nm } from '../theory.js';
 import { FB, tuning } from './fretboard.js';
@@ -97,6 +98,7 @@ export const ED = {
   put(s, f) {
     this.fix();
     if (f < 0 || f > FB.nf()) return;
+    snap();
     const bar = SQ.mel[this.b],
       h = this.head(),
       m = tuning()[s] + f;
@@ -112,6 +114,7 @@ export const ED = {
   },
   del() {
     this.fix();
+    snap();
     const bar = SQ.mel[this.b];
     bar[this.head()] = null;
     bar[this.k] = null;
@@ -176,6 +179,7 @@ $('tab').onclick = (e) => {
 $('edart').onchange = (e) => {
   const n = SQ.mel[ED.b][ED.k];
   if (!n || n.tri) return;
+  snap();
   if (e.target.value) n.a = e.target.value;
   else delete n.a;
   drawTab();
@@ -184,6 +188,7 @@ $('edlen').onchange = (e) => {
   const bar = SQ.mel[ED.b],
     n = bar[ED.k];
   if (!n || n.tri) return;
+  snap();
   if (e.target.checked) {
     n.len = 2;
     if (ED.k + 1 < bar.length) bar[ED.k + 1] = null;
@@ -193,3 +198,35 @@ $('edlen').onchange = (e) => {
 export function hlTab(bar) {
   document.querySelectorAll('.tb').forEach((e) => e.classList.toggle('on', +e.dataset.b === bar));
 }
+
+/* ---------- UNDO for melody changes (editor steps and "New melody") ---------- */
+const HIST = createHistory(50);
+// a snapshot only fits while tuning, capo, meter and the bar counts are what they were
+const histSig = () => [FB.tun, FB.capo, meter(), SQ.secs.map((x) => x.p.length).join()].join('|');
+const undoBtn = () => {
+  $('undo').disabled = !HIST.size;
+};
+// remembers every section's melody; call it before changing one
+export function snap() {
+  HIST.push(
+    histSig(),
+    SQ.secs.map((x) => x.m),
+  );
+  undoBtn();
+}
+export function undo() {
+  const mels = HIST.pop(histSig());
+  if (mels === undefined) return;
+  if (mels === null) toast(L('Krok späť už nie je možný'));
+  else {
+    mels.forEach((m, i) => (SQ.secs[i].m = m));
+    drawTab();
+    touch();
+  }
+  undoBtn();
+}
+export function clearHist() {
+  HIST.clear();
+  undoBtn();
+}
+$('undo').onclick = undo;

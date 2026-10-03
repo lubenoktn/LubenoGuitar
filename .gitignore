@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/
+.claude/
 # build output: created by `npm run build`, published by the GitHub workflow
 /LubenoGuitar.html
 _site/

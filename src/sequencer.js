@@ -105,9 +105,12 @@ export const SQ = {
   btns() {
     const p = this.playing && !this.metOnly,
       m = this.playing && this.metOnly;
-    $('play').textContent = L(p ? '■ Zastaviť' : '▶ Spustiť sprievod');
+    const pl = L(p ? 'Zastaviť' : 'Spustiť sprievod');
+    $('play').innerHTML = `${p ? '■' : '▶'}<span class="hidden sm:inline"> ${pl}</span>`;
+    $('play').setAttribute('aria-label', pl);
     $('play').className = 'px-4 py-2 rounded-xl font-semibold text-slate-950 ' + (p ? 'bg-rose-500' : 'bg-emerald-500');
-    $('met').textContent = (m ? '■ ' : '') + L('Metronóm');
+    $('met').innerHTML = `${m ? '■' : '♩'}<span class="hidden sm:inline"> ${L('Metronóm')}</span>`;
+    $('met').setAttribute('aria-label', L('Metronóm'));
     $('met').className =
       'px-3 py-2 rounded-xl font-semibold text-sm border ' +
       (m ? 'bg-rose-500 border-rose-400 text-slate-950' : 'bg-s7 border-s6');

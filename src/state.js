@@ -11,7 +11,7 @@ import { clampBpm, guessKey, normBar, secName } from './songdata.js';
 import { BLACK, CH, N, SC, TUN, ci, mk, nm } from './theory.js';
 import { FB, tuning } from './ui/fretboard.js';
 import { drawSecs } from './ui/sections.js';
-import { drawTab } from './ui/tab.js';
+import { clearHist, drawTab } from './ui/tab.js';
 import { TN } from './ui/tuner.js';
 
 export const song = () => ({
@@ -66,6 +66,7 @@ export function setState(d) {
     }),
     p = secs[0].p;
   if (SQ.playing) SQ.stop();
+  clearHist();
   SQ.secs = secs;
   SQ.cs = Math.max(0, Math.min(secs.length - 1, d.cs | 0));
   SQ.order = (Array.isArray(d.ord) ? d.ord : [])

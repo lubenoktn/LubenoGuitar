@@ -16,3 +16,13 @@ html,body{background:#090d16;color:#f1f5f9}
 .lh .fw{border-right:0;border-left:2px solid #94a3b8}.lh .nut{border-right:0;border-left:7px solid #e2e8f0}
 @media (prefers-reduced-motion:reduce){.rg{animation:none}}
 button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #34d399}
+/* foldable groups */
+.grp>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:.5rem;user-select:none}
+.grp>summary::-webkit-details-marker{display:none}
+.grp>summary::before{content:'▸';color:#94a3b8;transition:transform .15s}
+.grp[open]>summary::before{transform:rotate(90deg)}
+/* touch screens: larger tap areas (the fret dots keep their size, only the area grows) and no zoom-in on focus */
+.nb{position:relative}
+@media (pointer:coarse){.nb::after{content:'';position:absolute;inset:-9px}button:not(.nb){min-height:36px}input,select,textarea{font-size:16px}}
+/* phone held sideways: a lower fretboard so all six strings fit under the header */
+@media (max-height:500px){#fb .h-11{height:2rem}}

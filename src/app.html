@@ -2,21 +2,23 @@
 <html lang="sk">
 <head>
 <meta charset="UTF-8">
+<meta name="theme-color" content="#090d16">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>LubenoGuitar</title>
 <style>/*CSS*/</style>
 </head>
 <body class="min-h-screen font-sans">
-<header class="sticky top-0 z-40 bg-s8/95 border-b border-s7 px-3 py-2.5">
- <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-  <div><h1 class="text-xl font-extrabold text-amber-400">LubenoGuitar</h1><p class="text-xs text-slate-400">Stupnice, sprievod a melódie</p></div>
+<header class="sticky top-0 z-40 bg-s8/95 border-b border-s7 px-3 py-2">
+ <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+  <div class="hidden sm:block"><h1 class="text-xl font-extrabold text-amber-400">LubenoGuitar</h1><p class="text-xs text-slate-400">Stupnice, sprievod a melódie</p></div>
   <div class="flex items-center gap-2 flex-wrap">
+   <button id="install" class="hidden px-2 py-1 text-xs font-bold rounded bg-amber-500 text-slate-950">Inštalovať</button>
    <button id="lang" aria-label="Jazyk / Language" class="px-2 py-1 text-xs font-bold rounded bg-s7 border border-s6">EN</button>
    <div id="beats" class="flex items-center gap-1" aria-hidden="true"></div>
-   <button id="play" class="px-4 py-2 rounded-xl font-semibold bg-emerald-500 text-slate-950">▶ Spustiť sprievod</button>
-   <button id="met" class="px-3 py-2 rounded-xl font-semibold bg-s7 border border-s6 text-sm">Metronóm</button>
-   <label class="text-xs text-slate-300 flex items-center gap-1">BPM <input id="bpm" type="number" min="40" max="240" value="100" class="w-16 bg-s9 text-amber-400 font-bold text-center rounded border border-s6 py-1"></label>
-   <button id="tap" class="px-2 py-1 text-xs rounded bg-s7 border border-s6">Tap</button><label class="text-xs text-slate-300 flex items-center gap-1">Hlasitosť <input id="vol" type="range" min="0" max="1" step=".05" value=".75" class="w-20 accent-emerald-400"></label>
+   <button id="play" class="px-4 py-2 rounded-xl font-semibold bg-emerald-500 text-slate-950">▶<span class="hidden sm:inline"> Spustiť sprievod</span></button>
+   <button id="met" class="px-3 py-2 rounded-xl font-semibold bg-s7 border border-s6 text-sm">♩<span class="hidden sm:inline"> Metronóm</span></button>
+   <label class="text-xs text-slate-300 flex items-center gap-1"><span class="hidden sm:inline">BPM</span> <input id="bpm" aria-label="BPM" type="number" min="40" max="240" value="100" class="w-16 bg-s9 text-amber-400 font-bold text-center rounded border border-s6 py-1"></label>
+   <button id="tap" class="px-2 py-1 text-xs rounded bg-s7 border border-s6">Tap</button><label class="hidden sm:flex text-xs text-slate-300 items-center gap-1">Hlasitosť <input id="vol" type="range" min="0" max="1" step=".05" value=".75" class="w-20 accent-emerald-400"></label>
   </div>
  </div>
 </header>
@@ -55,20 +57,20 @@
  </section>
 
  <section id="t-backing" class="hidden grid lg:grid-cols-3 gap-4">
-  <div class="bg-s8 border border-s7 rounded-2xl p-4 space-y-2 self-start" id="presets"></div>
+  <details class="grp bg-s8 border border-s7 rounded-2xl p-4 self-start"><summary class="text-sm font-bold text-slate-200">Presety</summary><div id="presets" class="space-y-2 mt-3"></div></details>
   <div class="lg:col-span-2 bg-s8 border border-s7 rounded-2xl p-4 space-y-4">
    <div class="flex items-center justify-between gap-2">
     <div><h2 class="font-bold">Vlastná postupnosť</h2><p class="text-xs text-slate-400">Vyber takt a zmeň akord (2 až 12 taktov)</p></div>
-    <div class="flex gap-2"><button id="addbar" class="px-3 py-1 text-xs font-bold rounded-lg bg-s7 border border-s6">+ Takt</button><button id="rembar" class="px-3 py-1 text-xs font-bold rounded-lg bg-s7 border border-s6 text-rose-300">− Takt</button></div>
+    <div class="flex gap-2"><button id="addbar" class="whitespace-nowrap px-3 py-1 text-xs font-bold rounded-lg bg-s7 border border-s6">+ Takt</button><button id="rembar" class="whitespace-nowrap px-3 py-1 text-xs font-bold rounded-lg bg-s7 border border-s6 text-rose-300">− Takt</button></div>
    </div>
-   <div class="bg-s9 border border-s7 rounded-xl p-3 space-y-2 text-xs text-slate-300">
-    <div class="flex flex-wrap items-center gap-2"><b>Časti piesne</b><div id="secs" class="flex flex-wrap gap-1"></div>
+   <details class="grp bg-s9 border border-s7 rounded-xl p-3"><summary class="text-xs font-bold text-slate-300">Časti piesne</summary><div class="mt-2 space-y-2 text-xs text-slate-300">
+    <div class="flex flex-wrap items-center gap-2"><div id="secs" class="flex flex-wrap gap-1"></div>
      <button id="secadd" class="px-2 py-1 rounded bg-s7 border border-s6">+ Časť</button><button id="secdel" class="px-2 py-1 rounded bg-s7 border border-s6 text-rose-300">− Časť</button>
      <label class="flex items-center gap-1 ml-auto">Názov <input id="secname" aria-label="Názov časti" maxlength="12" class="w-24 bg-s8 border border-s6 rounded px-2 py-1"></label></div>
     <div class="flex flex-wrap items-center gap-2"><label class="flex items-center gap-1"><input type="checkbox" id="songmode" class="accent-emerald-500"> hrať celú pieseň v poradí</label>
      <input id="ord" aria-label="Poradie častí" placeholder="A A B A" class="flex-1 min-w-[8rem] bg-s8 border border-s6 rounded px-2 py-1 font-mono text-cyan-300"></div>
     <p class="text-[11px] text-slate-500">Každá časť má vlastné takty a melódiu. Poradie zapíš názvami častí oddelenými medzerou, napr. A A B A. Bez zaškrtnutia sa opakuje len zobrazená časť.</p>
-   </div>
+   </div></details>
    <div class="bg-s9 border border-s7 rounded-xl p-3 flex flex-wrap items-center gap-2 text-xs text-slate-400">
     <span>Tónina</span>
     <select id="kroot" aria-label="Tónina" class="bg-s8 border border-s6 rounded px-2 py-1 font-bold text-amber-300"></select>
@@ -93,17 +95,17 @@
     <label><input type="checkbox" id="cnt" class="accent-emerald-500"> predtakt</label>
     <button id="trm" class="px-2 py-1 rounded bg-s7 border border-s6">Tónina −½</button><button id="trp" class="px-2 py-1 rounded bg-s7 border border-s6">Tónina +½</button>
    </div>
-   <div class="p-3 rounded-xl bg-s9 border border-s7 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-300">
-    <b>Cvičenie</b>
+   <details class="grp p-3 rounded-xl bg-s9 border border-s7"><summary class="text-xs font-bold text-slate-300">Cvičenie</summary><div class="mt-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-300">
+
     <div class="flex items-center gap-1"><label class="flex items-center gap-1"><input type="checkbox" id="lpon" class="accent-emerald-500"> slučka od taktu</label><input id="lpa" aria-label="Slučka od taktu" type="number" min="1" max="12" value="1" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"> po <input id="lpb" aria-label="Slučka po takt" type="number" min="1" max="12" value="4" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"></div>
     <div class="flex flex-wrap items-center gap-1"><label class="flex items-center gap-1"><input type="checkbox" id="spon" class="accent-emerald-500"> zrýchliť o</label><input id="spinc" aria-label="O koľko BPM zrýchliť" type="number" min="1" max="20" value="2" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"> BPM každé <input id="spev" aria-label="Po koľkých kolách zrýchliť" type="number" min="1" max="16" value="2" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"> kolá, najviac po <input id="spmax" aria-label="Najvyššie tempo" type="number" min="40" max="240" value="160" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"> BPM</div>
-   </div>
-   <div class="p-3 rounded-xl bg-s9 border border-s7">
-    <div class="text-xs font-bold text-slate-300 mb-2">Mix stôp <span class="font-normal text-slate-500">(klik na názov stopu stlmí)</span></div>
+   </div></details>
+   <details class="grp p-3 rounded-xl bg-s9 border border-s7"><summary class="text-xs font-bold text-slate-300">Mix stôp <span class="font-normal text-slate-500">(klik na názov stopu stlmí)</span></summary><div class="mt-2 ">
+
     <div id="mix" class="flex flex-wrap gap-x-4 gap-y-2 text-xs"></div>
-   </div>
-   <div class="p-3 rounded-xl bg-s9 border border-s7 flex flex-wrap items-center gap-2 text-xs text-slate-300">
-    <b>Uložené postupnosti</b>
+   </div></details>
+   <details class="grp p-3 rounded-xl bg-s9 border border-s7"><summary class="text-xs font-bold text-slate-300">Uložené postupnosti</summary><div class="mt-2 flex flex-wrap items-center gap-2 text-xs text-slate-300">
+
     <input id="sname" aria-label="Názov na uloženie" placeholder="Názov" maxlength="30" class="w-32 bg-s8 border border-s6 rounded px-2 py-1">
     <button id="svp" class="px-2 py-1 rounded bg-s7 border border-s6">Uložiť</button>
     <select id="slots" aria-label="Uložené postupnosti" class="ml-auto bg-s8 border border-s6 rounded px-2 py-1 max-w-[10rem]"></select>
@@ -111,8 +113,8 @@
     <button id="dlp" class="px-2 py-1 rounded bg-s7 border border-s6 text-rose-300">Zmazať</button>
     <div class="w-full flex flex-wrap items-center gap-2"><button id="share" class="px-2 py-1 rounded bg-s7 border border-s6">Zdieľať odkaz</button><input id="linkin" aria-label="Vlož odkaz alebo kód" placeholder="Vlož odkaz alebo kód" class="flex-1 min-w-[8rem] bg-s8 border border-s6 rounded px-2 py-1"><button id="linkgo" class="px-2 py-1 rounded bg-s7 border border-s6">Otvoriť odkaz</button></div>
     <p class="w-full text-[11px] text-slate-500">Rozpracovaný stav sa ukladá automaticky a po otvorení sa obnoví.</p>
-   </div>
-   <div class="p-3 rounded-xl bg-s9 border border-s7 space-y-2"><div class="flex flex-wrap items-center gap-2 text-xs text-slate-300"><b>Melódia</b><select id="mstyle" class="bg-s8 border border-s6 rounded px-2 py-1"><option value="pent">Pentatonika</option><option value="lyric">Spevná linka</option><option value="blues">Blues</option></select><select id="msound" aria-label="Zvuk melódie" class="bg-s8 border border-s6 rounded px-2 py-1"><option value="ac">Akustická gitara</option><option value="mute">Tlmená gitara</option><option value="clean">Elektrická čistá</option><option value="dist">Elektrická skreslená</option><option value="flute">Flauta</option><option value="epiano">Elektrické piano</option></select><label><input type="checkbox" id="lock" class="accent-emerald-500"> zamknúť</label><button id="newmel" class="ml-auto px-3 py-1 bg-emerald-500 text-slate-950 font-bold rounded">Nová melódia</button><button id="savetab" class="px-3 py-1 bg-s7 border border-s6 rounded">Uložiť tabulatúru (.txt)</button><button id="savemid" class="px-3 py-1 bg-s7 border border-s6 rounded">Uložiť MIDI (.mid)</button><button id="edbtn" class="px-3 py-1 rounded border bg-s7 border-s6">Upraviť melódiu</button></div>
+   </div></details>
+   <div class="p-3 rounded-xl bg-s9 border border-s7 space-y-2"><div class="flex flex-wrap items-center gap-2 text-xs text-slate-300"><b>Melódia</b><select id="mstyle" class="bg-s8 border border-s6 rounded px-2 py-1"><option value="pent">Pentatonika</option><option value="lyric">Spevná linka</option><option value="blues">Blues</option></select><select id="msound" aria-label="Zvuk melódie" class="bg-s8 border border-s6 rounded px-2 py-1"><option value="ac">Akustická gitara</option><option value="mute">Tlmená gitara</option><option value="clean">Elektrická čistá</option><option value="dist">Elektrická skreslená</option><option value="flute">Flauta</option><option value="epiano">Elektrické piano</option></select><label><input type="checkbox" id="lock" class="accent-emerald-500"> zamknúť</label><button id="undo" disabled class="ml-auto px-3 py-1 bg-s7 border border-s6 rounded disabled:opacity-40">↶ Späť</button><button id="newmel" class="px-3 py-1 bg-emerald-500 text-slate-950 font-bold rounded">Nová melódia</button><button id="savetab" class="px-3 py-1 bg-s7 border border-s6 rounded">Uložiť tabulatúru (.txt)</button><button id="savemid" class="px-3 py-1 bg-s7 border border-s6 rounded">Uložiť MIDI (.mid)</button><button id="edbtn" class="px-3 py-1 rounded border bg-s7 border-s6">Upraviť melódiu</button></div>
     <div id="edbar" class="hidden flex flex-wrap items-center gap-3 text-xs text-slate-300 p-2 rounded-lg bg-s8 border border-amber-500/40">
      <span id="edpos" class="font-mono text-amber-300"></span>
      <button id="eddel" class="px-2 py-1 rounded bg-s7 border border-s6 text-rose-300">Zmazať tón</button>

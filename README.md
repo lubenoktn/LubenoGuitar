@@ -8,9 +8,9 @@ A single-file practice app for guitarists: scales on the fretboard, backing trac
 
 ## Použitie / Usage
 
-Otvor appku online, alebo si [stiahni jeden súbor](https://lubenoktn.github.io/LubenoGuitar/LubenoGuitar.html) (Uložiť ako) a otvor ho v prehliadači. Nič sa neinštaluje a funguje aj bez internetu.
+Otvor appku online (na telefóne sa dá nainštalovať na plochu a potom funguje aj offline), alebo si [stiahni jeden súbor](https://lubenoktn.github.io/LubenoGuitar/LubenoGuitar.html) (Uložiť ako) a otvor ho v prehliadači. Nič sa neinštaluje a funguje aj bez internetu.
 
-Use it online, or [download the single file](https://lubenoktn.github.io/LubenoGuitar/LubenoGuitar.html) (Save as) and open it in a browser. Nothing to install; it works offline.
+Use it online (on a phone it can be installed to the home screen and then works offline), or [download the single file](https://lubenoktn.github.io/LubenoGuitar/LubenoGuitar.html) (Save as) and open it in a browser. Nothing to install; it works offline.
 
 ## Vývoj / Development
 
@@ -33,13 +33,14 @@ npm run format  # Prettier
 | `src/audio.js`, `sequencer.js`, `melody.js` | synthesis, scheduler and grooves, melody generation |
 | `src/state.js`, `export.js`, `i18n.js`, `lang/en.js` | saving and loading, tab and MIDI export, language |
 | `src/ui/` | fretboard, tablature and melody editor, chord diagrams, quiz, tuner, sections, sharing |
+| `src/pwa.js`, `public/` | installable app: manifest, service worker (offline copy), icons, and the page that forwards the short address |
 | `test/` | tests for the modules that touch neither the page nor the sound |
 
-Modules that touch neither the page nor the sound (`theory`, `data`, `voicing`, `midi`, `pitch`, `songdata`) can be imported in Node and are covered by tests. In the browser console, `__lg` exposes everything the modules export.
+Modules that touch neither the page nor the sound (`theory`, `data`, `voicing`, `midi`, `pitch`, `songdata`, `history`) can be imported in Node and are covered by tests. In the browser console, `__lg` exposes everything the modules export.
 
 ## Nasadenie / Deployment
 
-Every push to `main` runs the tests, builds the app and publishes it to GitHub Pages (`.github/workflows/deploy.yml`). Pull requests are tested and built but not published. To host it elsewhere, run `npm run build` and upload `LubenoGuitar.html` and `index.html` to any static host served over HTTPS.
+Every push to `main` runs the tests, builds the app and publishes it to GitHub Pages (`.github/workflows/deploy.yml`). Pull requests are tested and built but not published. To host it elsewhere, run `npm run build` and upload `LubenoGuitar.html` together with the contents of `public/` to any static host served over HTTPS.
 
 ## Licencia / License
 

@@ -2,8 +2,12 @@
 export const EN = {
   // header, fretboard, tabs
   'Stupnice, sprievod a melódie': 'Scales, backing and melodies',
-  '▶ Spustiť sprievod': '▶ Play backing',
-  '■ Zastaviť': '■ Stop',
+  'Spustiť sprievod': 'Play backing',
+  Zastaviť: 'Stop',
+  Inštalovať: 'Install',
+  Presety: 'Presets',
+  '↶ Späť': '↶ Undo',
+  'Krok späť už nie je možný': 'This step can no longer be undone',
   Metronóm: 'Metronome',
   Hlasitosť: 'Volume',
   'Tóny:': 'Notes:',
