@@ -17,7 +17,7 @@ The installed app updates itself when launched with a connection. Saved songs st
 
 The app also exists as a single file, `LubenoGuitar.html`, which you can download and open with a double click, without a connection. Songs saved in the downloaded file and on the web address are kept separately.
 
-On a phone the top bar shrinks to one row (the buttons show only the ▶ and ♩ symbols) and the groups in the Backing tab are folded; tap a title to unfold one. Use the device buttons for volume on a phone.
+On a phone the top bar shrinks to one row (the buttons show only the ▶ and ♩ symbols) and the groups in the Backing tab are folded; tap a title to unfold one. Use the device buttons for volume on a phone. The screen stays on while the app is playing.
 
 ## Quick start {#quickstart}
 
@@ -99,6 +99,8 @@ You can write the progression in roman numerals instead of concrete chords.
 2. Type the degrees into the field, e.g. `I V vi IV`.
 3. Click **Apply degrees** or press Enter.
 
+You can also type chord names into the same field, e.g. `C G Am F`, or paste chords copied from the web. Bars can be separated with a vertical line (`| C G | Am F |`). The key is then worked out from the chords. Chords the app does not know (e.g. `Cadd9`, `G6`) are replaced with the nearest one, and the app tells you.
+
 Changing the key in the list transposes the whole song; the degrees stay the same. Changing the mode does not change the chords, only how their degrees are labelled. The **Key −½** and **Key +½** buttons move the song by a half step. The exact notation is in [Degree notation](#degree-syntax).
 
 ### Bars and the bar editor {#bars}
@@ -151,7 +153,9 @@ Your work is saved by itself and restored when you open the app again: song sect
 2. **Load** restores the song selected in the list with all its sections, melodies, tempo, groove and tuning.
 3. **Delete** removes the selected song for good.
 
-Everything is saved only in the browser you use the app in. Another browser, device or address will not see your saved songs, and clearing the browser's data removes them. Use a share link to move a song.
+Everything is saved only in the browser you use the app in. Another browser, device or address will not see your saved songs, and clearing the browser's data removes them. Use a share link to move a single song.
+
+**Back up to a file** downloads all saved songs in one file. **Restore from a file** adds them to the saved songs on this or another device; nothing is overwritten, a song with a name already in use gets the suffix (2).
 
 ### Share link {#share}
 
@@ -288,5 +292,5 @@ In a minor key the degrees count from the natural minor scale: in A minor, `i` =
 | The backing stutters | Keep the app's tab in the foreground. Browsers slow down background tabs. |
 | The state was not restored | Saving does not work in a private window or with site data blocked. Saved data is separate for each browser and address. |
 | The app on the phone shows an old version | Close it completely and launch it again with an internet connection. |
-| "Unknown degree" | Check the notation: roman numerals I to VII only, all uppercase or all lowercase, bars separated by spaces. |
+| "Cannot read" | Check what you typed. Degrees: roman numerals I to VII only, all uppercase or all lowercase. Chords: a capital note letter and a type, e.g. `Am7`, `F#m`, `Bb`. Separate bars with spaces. |
 | The space bar does not start playback | The cursor is in a text field or a list. Click an empty spot on the page. |

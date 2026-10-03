@@ -143,3 +143,140 @@ export const mainScale = (c) =>
             ? 'diminished'
             : 'ionian';
 export const BLACK = [1, 3, 6, 8, 10];
+
+/* ---------- CHORDS WRITTEN AS TEXT ("C G Am F", "| Dm7 G7 | Cmaj7 |") ---------- */
+const ENHARMONIC = { Db: 'C#', Eb: 'D#', Gb: 'F#', Ab: 'G#', Bb: 'A#', Cb: 'B', Fb: 'E', 'E#': 'F', 'B#': 'C' };
+// suffix as people write it -> chord type of the app
+const SUFFIX = {
+  '': 'maj',
+  maj: 'maj',
+  M: 'maj',
+  m: 'm',
+  min: 'm',
+  mi: 'm',
+  '-': 'm',
+  7: '7',
+  dom7: '7',
+  maj7: 'maj7',
+  M7: 'maj7',
+  ma7: 'maj7',
+  Δ: 'maj7',
+  Δ7: 'maj7',
+  m7: 'm7',
+  min7: 'm7',
+  mi7: 'm7',
+  '-7': 'm7',
+  m7b5: 'm7b5',
+  min7b5: 'm7b5',
+  'm7(b5)': 'm7b5',
+  ø: 'm7b5',
+  ø7: 'm7b5',
+  dim: 'dim7',
+  dim7: 'dim7',
+  '°': 'dim7',
+  '°7': 'dim7',
+  o: 'dim7',
+  o7: 'dim7',
+  sus4: 'sus4',
+  sus: 'sus4',
+  9: '9',
+  m9: 'm9',
+  min9: 'm9',
+  13: '13',
+  '7alt': '7alt',
+  alt: '7alt',
+};
+// suffixes the app has no chord for -> the nearest chord it has
+const NEAREST = {
+  5: 'maj',
+  6: 'maj',
+  add9: 'maj',
+  '6/9': 'maj',
+  aug: 'maj',
+  '+': 'maj',
+  sus2: 'sus4',
+  '7sus4': 'sus4',
+  '7sus': 'sus4',
+  maj9: 'maj7',
+  M9: 'maj7',
+  maj13: 'maj7',
+  m6: 'm',
+  min6: 'm',
+  madd9: 'm',
+  mMaj7: 'm',
+  'm(maj7)': 'm',
+  m11: 'm7',
+  min11: 'm7',
+  m13: 'm9',
+  11: '9',
+  '9#11': '9',
+  '7#9': '7alt',
+  '7b9': '7alt',
+  '7#5': '7alt',
+  '7b5': '7alt',
+  '7#11': '7alt',
+  '7b13': '7alt',
+};
+// one chord name; germanB: a bare B means B flat (and H is always B natural). A bass note after "/" is ignored.
+export function parseChordName(tok, germanB = false) {
+  const m = tok
+    .replace(/♯/g, '#')
+    .replace(/♭/g, 'b')
+    .match(/^([A-H])([#b]?)(.*)$/);
+  if (!m) throw tok;
+  let name = m[1] === 'H' ? 'B' + m[2] : m[1] === 'B' && germanB && !m[2] ? 'Bb' : m[1] + m[2];
+  name = ENHARMONIC[name] || name;
+  const suf = m[3] in SUFFIX || m[3] in NEAREST ? m[3] : m[3].replace(/\/[A-H][#b]?$/, '');
+  if (ci(name) < 0 || !(suf in SUFFIX || suf in NEAREST)) throw tok;
+  return { c: mk(name, SUFFIX[suf] || NEAREST[suf]), approx: !(suf in SUFFIX) };
+}
+// bars from chord names. Without "|" every name is a bar and a comma joins two chords in one bar;
+// with "|" the bars are what stands between the lines. approx lists the chords that were simplified.
+export function parseChords(str, germanB = false) {
+  const text = str.replace(/[–—]/g, '-').replace(/\s-\s/g, ' ').trim();
+  const approx = [];
+  const one = (tok) => {
+    const x = parseChordName(tok, germanB);
+    if (x.approx) approx.push(tok + ' → ' + lab(x.c));
+    return x.c;
+  };
+  const bar = (b, sep) => b.split(sep).filter(Boolean).slice(0, 2).map(one);
+  const bars = text.includes('|')
+    ? text
+        .split('|')
+        .map((b) => b.trim())
+        .filter(Boolean)
+        .map((b) => bar(b, /[\s,]+/))
+    : text
+        .split(/\s+/)
+        .filter(Boolean)
+        .map((b) => bar(b, ','));
+  return { bars, approx };
+}
+// chord names start with a note letter; degrees start with a roman numeral or an accidental
+export const looksLikeChords = (str) => /^[\s|]*[A-H]/.test(str);
+// the key whose scale holds most of the chords; ties go to the key of the first, then the last chord
+export function detectKey(bars) {
+  const cs = bars.flat();
+  const tonic = (c, pc, m) => ci(c.r) === pc && MINOR.includes(c.t) === (m === 'min');
+  let best = null,
+    top = -1;
+  for (let pc = 0; pc < 12; pc++)
+    for (const m of ['maj', 'min']) {
+      // degree -> expected quality (M major, m minor, x either)
+      const want =
+        m === 'maj'
+          ? { 0: 'M', 2: 'm', 4: 'm', 5: 'M', 7: 'M', 9: 'm' }
+          : { 0: 'm', 3: 'M', 5: 'm', 7: 'x', 8: 'M', 10: 'M' };
+      let score = tonic(cs[0], pc, m) * 0.6 + tonic(cs[cs.length - 1], pc, m) * 0.3;
+      cs.forEach((c) => {
+        const q = want[(((ci(c.r) - pc) % 12) + 12) % 12];
+        if (q && (q === 'x' || (q === 'm') === MINOR.includes(c.t))) score++;
+      });
+      if (score > top) {
+        top = score;
+        best = { r: cn(pc), m };
+      }
+    }
+  return best;
+}

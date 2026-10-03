@@ -17,7 +17,7 @@ Nainštalovaná appka sa aktualizuje sama pri spustení s pripojením. Uložené
 
 Aplikácia existuje aj ako jeden súbor `LubenoGuitar.html`, ktorý si môžeš stiahnuť a otvoriť dvojklikom bez internetu. Uloženia v stiahnutom súbore a na webovej adrese sú oddelené.
 
-Na telefóne je horná lišta zhustená do jedného riadku (tlačidlá majú len symboly ▶ a ♩) a bloky v záložke Sprievod sú zbalené; rozbalíš ich ťuknutím na názov. Hlasitosť sa na telefóne ovláda tlačidlami zariadenia.
+Na telefóne je horná lišta zhustená do jedného riadku (tlačidlá majú len symboly ▶ a ♩) a bloky v záložke Sprievod sú zbalené; rozbalíš ich ťuknutím na názov. Hlasitosť sa na telefóne ovláda tlačidlami zariadenia. Počas hrania ostáva displej zapnutý.
 
 ## Rýchly štart {#quickstart}
 
@@ -99,6 +99,8 @@ Postupnosť môžeš zapísať rímskymi číslicami namiesto konkrétnych akord
 2. Do poľa napíš stupne, napr. `I V vi IV`.
 3. Klikni **Použiť stupne** alebo stlač Enter.
 
+Do toho istého poľa môžeš napísať aj názvy akordov, napr. `C G Am F`, alebo vložiť akordy skopírované z webu. Takty sa dajú oddeliť zvislou čiarou (`| C G | Am F |`). Tónina sa pri tom určí sama podľa akordov. Akordy, ktoré aplikácia nepozná (napr. `Cadd9`, `G6`), nahradí najbližším a oznámi to.
+
 Zmena tóniny vo výbere celú pieseň transponuje, stupne ostanú rovnaké. Zmena tónorodu akordy nemení, len prepočíta označenie stupňov. Tlačidlá **Tónina −½** a **Tónina +½** posúvajú pieseň o poltón. Presný zápis je v časti [Zápis stupňov](#degree-syntax).
 
 ### Takty a editor taktu {#bars}
@@ -151,7 +153,9 @@ Rozpracovaný stav sa ukladá sám a po opätovnom otvorení sa obnoví: časti 
 2. **Načítať** obnoví pieseň vybranú v zozname vrátane všetkých častí, melódií, tempa, groovu a ladenia.
 3. **Zmazať** vybranú pieseň natrvalo odstráni.
 
-Všetko sa ukladá len v prehliadači, v ktorom aplikáciu používaš. Iný prehliadač, zariadenie alebo adresa uložené piesne neuvidí a vymazanie údajov prehliadača ich odstráni. Na prenos použi zdieľanie odkazom.
+Všetko sa ukladá len v prehliadači, v ktorom aplikáciu používaš. Iný prehliadač, zariadenie alebo adresa uložené piesne neuvidí a vymazanie údajov prehliadača ich odstráni. Na prenos jednej piesne použi zdieľanie odkazom.
+
+**Zálohovať do súboru** stiahne všetky uložené piesne v jednom súbore. **Obnoviť zo súboru** ich pridá k uloženým na tomto alebo inom zariadení; nič sa neprepíše, pieseň s rovnakým názvom dostane príponu (2).
 
 ### Zdieľanie odkazom {#share}
 
@@ -288,5 +292,5 @@ V molovej tónine sa stupne počítajú od prirodzenej molovej stupnice: v A mol
 | Sprievod sa zasekáva | Nechaj kartu s aplikáciou v popredí. Prehliadač karty na pozadí spomaľuje. |
 | Stav sa po otvorení neobnovil | Ukladanie nefunguje v anonymnom okne a pri zakázaných údajoch stránok. Uloženia sú zvlášť pre každý prehliadač a adresu. |
 | Appka v telefóne ukazuje starú verziu | Úplne ju zatvor a spusti znova s pripojením na internet. |
-| „Nerozumiem stupňu“ | Skontroluj zápis: len rímske číslice I až VII, celé veľké alebo celé malé, takty oddelené medzerou. |
+| „Nerozumiem zápisu“ | Skontroluj zápis. Stupne: len rímske číslice I až VII, celé veľké alebo celé malé. Akordy: veľké písmeno tónu a typ, napr. `Am7`, `F#m`, `Bb`. Takty oddeľ medzerou. |
 | Medzerník nespúšťa prehrávanie | Kurzor je v textovom poli alebo vo výbere. Klikni na prázdne miesto stránky. |

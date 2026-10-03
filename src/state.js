@@ -7,7 +7,7 @@ import { applyLang } from './main.js';
 import { forSecs, genMel, mkey } from './melody.js';
 import { OPT } from './options.js';
 import { S, SQ, drawBeats, edSync } from './sequencer.js';
-import { clampBpm, guessKey, normBar, secName } from './songdata.js';
+import { clampBpm, guessKey, mergeSlots, normBar, secName } from './songdata.js';
 import { BLACK, CH, N, SC, TUN, ci, mk, nm } from './theory.js';
 import { FB, tuning } from './ui/fretboard.js';
 import { drawSecs } from './ui/sections.js';
@@ -176,6 +176,14 @@ export function syncUI() {
   redraw();
 }
 export let SLOTS = LS.get('lg_slots') || {};
+// adds songs from a backup to the saved ones and returns how many were added
+export function importSlots(songs) {
+  const r = mergeSlots(SLOTS, songs);
+  Object.assign(SLOTS, r.slots);
+  LS.set('lg_slots', SLOTS);
+  drawSlots($('slots').value);
+  return r.added;
+}
 export function drawSlots(sel) {
   const s = $('slots');
   s.innerHTML = '';

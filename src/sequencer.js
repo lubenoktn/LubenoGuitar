@@ -7,6 +7,7 @@ import { CH, SC, ci, degOf, flatKey, lab, mainScale, mf, nm, useFlat } from './t
 import { drawDias } from './ui/diagrams.js';
 import { FB, flash, setScale } from './ui/fretboard.js';
 import { showSec } from './ui/sections.js';
+import { keepAwake } from './wakelock.js';
 import { hlTab } from './ui/tab.js';
 
 export const dl = (c) => nm(ci(c.r), SQ.flat()) + CH[c.t][0];
@@ -68,6 +69,7 @@ export const SQ = {
   },
   start() {
     A.resume();
+    keepAwake(true);
     this.playing = true;
     this.step = 0;
     if (this.songMode && !this.metOnly) {
@@ -94,6 +96,7 @@ export const SQ = {
   },
   stop() {
     this.playing = false;
+    keepAwake(false);
     clearInterval(this.timer);
     this.btns();
     $('nowplaying').classList.add('hidden');

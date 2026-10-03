@@ -28,9 +28,10 @@ import { L, i18n } from './i18n.js';
 import { genAll, genMel } from './melody.js';
 import { OPT } from './options.js';
 import { SQ, drawBeats, edSync, meter } from './sequencer.js';
-import { clampBpm } from './songdata.js';
-import { SLOTS, drawMix, drawSlots, full, redraw, setState, song, syncUI, touch } from './state.js';
-import { CH, SC, ci, cn, mk, parseDeg } from './theory.js';
+import { clampBpm, makeBackup, readBackup } from './songdata.js';
+import { saveBlob } from './export.js';
+import { SLOTS, drawMix, drawSlots, full, importSlots, redraw, setState, song, syncUI, touch } from './state.js';
+import { CH, SC, ci, cn, detectKey, looksLikeChords, mk, parseChords, parseDeg } from './theory.js';
 import { drawDias } from './ui/diagrams.js';
 import { FB, setScale } from './ui/fretboard.js';
 import { QZ } from './ui/quiz.js';
@@ -306,25 +307,54 @@ $('kmode').onchange = (e) => {
   SQ.key.m = e.target.value;
   redraw();
 };
+// the field takes roman-numeral degrees ("I V vi IV") or chord names ("C G Am F")
 export const degApply = () => {
+  const text = $('degs').value,
+    chords = looksLikeChords(text);
+  let p,
+    note = '';
   try {
-    const p = parseDeg($('degs').value, SQ.key);
-    if (p.length < 2 || p.length > 12) return toast(L('Postupnosť musí mať 2 až 12 taktov'));
-    SQ.prog = p;
-    SQ.sel = 0;
-    SQ.bar %= p.length;
-    edSync();
-    genMel(true);
-    $('degs').blur();
-    redraw();
-    toast(L('Postupnosť nastavená'));
+    if (chords) {
+      const r = parseChords(text, OPT.h);
+      p = r.bars;
+      if (r.approx.length) note = L('Zjednodušené: ') + r.approx.join(', ');
+    } else p = parseDeg(text, SQ.key);
   } catch (x) {
-    toast(L('Nerozumiem stupňu: ') + x);
+    return toast(L('Nerozumiem zápisu: ') + x);
   }
+  if (p.length < 2 || p.length > 12) return toast(L('Postupnosť musí mať 2 až 12 taktov'));
+  if (chords) {
+    SQ.key = detectKey(p);
+    $('kroot').value = SQ.key.r;
+    $('kmode').value = SQ.key.m;
+  }
+  SQ.prog = p;
+  SQ.sel = 0;
+  SQ.bar %= p.length;
+  edSync();
+  genMel(true);
+  $('degs').blur();
+  redraw();
+  toast(note || L('Postupnosť nastavená'));
 };
 $('degapply').onclick = degApply;
 $('degs').onkeydown = (e) => {
   if (e.key === 'Enter') degApply();
+};
+$('bkout').onclick = () => {
+  const day = new Date().toISOString().slice(0, 10);
+  saveBlob(`lubenoguitar-zaloha-${day}.json`, new Blob([makeBackup(SLOTS, song(), day)], { type: 'application/json' }));
+};
+$('bkin').onclick = () => $('bkfile').click();
+$('bkfile').onchange = async (e) => {
+  const f = e.target.files[0];
+  e.target.value = '';
+  if (!f) return;
+  try {
+    toast(L('Pridané piesne zo zálohy: ') + importSlots(readBackup(await f.text())));
+  } catch (x) {
+    toast(L('Súbor nie je záloha LubenoGuitar'));
+  }
 };
 $('svp').onclick = () => {
   const n = $('sname').value.trim() || $('slots').value;
