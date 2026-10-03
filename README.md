@@ -8,13 +8,13 @@ A single-file practice app for guitarists: scales on the fretboard, backing trac
 
 ## Použitie / Usage
 
-Otvor `LubenoGuitar.html` v prehliadači. Nič sa neinštaluje a funguje aj bez internetu.
+Otvor appku online, alebo si [stiahni jeden súbor](https://lubenoktn.github.io/LubenoGuitar/LubenoGuitar.html) (Uložiť ako) a otvor ho v prehliadači. Nič sa neinštaluje a funguje aj bez internetu.
 
-Open `LubenoGuitar.html` in a browser. Nothing to install; it works offline.
+Use it online, or [download the single file](https://lubenoktn.github.io/LubenoGuitar/LubenoGuitar.html) (Save as) and open it in a browser. Nothing to install; it works offline.
 
 ## Vývoj / Development
 
-`LubenoGuitar.html` is a build product. Edit the sources in `src/` and rebuild; do not edit the built file by hand.
+`LubenoGuitar.html` is a build product and is not kept in the repository. Edit the sources in `src/` and build it with the commands below.
 
 ```bash
 npm install     # once: esbuild, Tailwind, Prettier
@@ -36,3 +36,11 @@ npm run format  # Prettier
 | `test/` | tests for the modules that touch neither the page nor the sound |
 
 Modules that touch neither the page nor the sound (`theory`, `data`, `voicing`, `midi`, `pitch`, `songdata`) can be imported in Node and are covered by tests. In the browser console, `__lg` exposes everything the modules export.
+
+## Nasadenie / Deployment
+
+Every push to `main` runs the tests, builds the app and publishes it to GitHub Pages (`.github/workflows/deploy.yml`). Pull requests are tested and built but not published. To host it elsewhere, run `npm run build` and upload `LubenoGuitar.html` and `index.html` to any static host served over HTTPS.
+
+## Licencia / License
+
+[MIT](LICENSE)

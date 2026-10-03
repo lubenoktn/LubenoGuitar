@@ -2,11 +2,12 @@
   "name": "lubenoguitar",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "Guitar practice app built into a single HTML file",
   "scripts": {
     "build": "node build.mjs",
-    "test": "node --test test/",
+    "test": "node --test test/*.test.js",
     "format": "prettier --write \"src/**/*.js\" \"test/**/*.js\" build.mjs"
   },
   "devDependencies": {
