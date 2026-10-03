@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LubenoGuitar</title>
+<!-- Tailwind 3.4 utilities compiled for the classes this file uses (works offline). New classes need a rebuild: npx tailwindcss@3 with this file as content and the colours s9 #090d16, s8 #111827, s7 #1f293d, s6 #2d3b55. -->
+<style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-bottom-1{bottom:-.25rem}.-top-1{top:-.25rem}.bottom-0{bottom:0}.bottom-4{bottom:1rem}.left-0{left:0}.left-1{left:.25rem}.left-1\/2{left:50%}.right-0{right:0}.right-4{right:1rem}.top-0{top:0}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.col-span-2{grid-column:span 2/span 2}.mx-auto{margin-left:auto;margin-right:auto}.mb-2{margin-bottom:.5rem}.ml-1{margin-left:.25rem}.ml-2{margin-left:.5rem}.ml-auto{margin-left:auto}.mr-2{margin-right:.5rem}.mt-1{margin-top:.25rem}.mt-3{margin-top:.75rem}.inline-block{display:inline-block}.flex{display:flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-11{height:2.75rem}.h-3{height:.75rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-1{width:.25rem}.w-1\.5{width:.375rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-20{width:5rem}.w-24{width:6rem}.w-3{width:.75rem}.w-32{width:8rem}.w-4{width:1rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-fit{width:-moz-fit-content;width:fit-content}.w-full{width:100%}.w-px{width:1px}.min-w-\[10rem\]{min-width:10rem}.min-w-\[8rem\]{min-width:8rem}.min-w-\[900px\]{min-width:900px}.max-w-7xl{max-width:80rem}.max-w-\[10rem\]{max-width:10rem}.max-w-full{max-width:100%}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.-translate-x-1{--tw-translate-x:-0.25rem}.-translate-x-1,.-translate-x-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-x-1\/2{--tw-translate-x:-50%}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-row-reverse{flex-direction:row-reverse}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-x-4{-moz-column-gap:1rem;column-gap:1rem}.gap-x-5{-moz-column-gap:1.25rem;column-gap:1.25rem}.gap-y-2{row-gap:.5rem}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.self-start{align-self:flex-start}.overflow-x-auto{overflow-x:auto}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.\!border-emerald-400{--tw-border-opacity:1!important;border-color:rgb(52 211 153/var(--tw-border-opacity,1))!important}.border-amber-300{--tw-border-opacity:1;border-color:rgb(252 211 77/var(--tw-border-opacity,1))}.border-amber-400{--tw-border-opacity:1;border-color:rgb(251 191 36/var(--tw-border-opacity,1))}.border-amber-500\/40{border-color:rgba(245,158,11,.4)}.border-cyan-300{--tw-border-opacity:1;border-color:rgb(103 232 249/var(--tw-border-opacity,1))}.border-cyan-500{--tw-border-opacity:1;border-color:rgb(6 182 212/var(--tw-border-opacity,1))}.border-cyan-500\/40{border-color:rgba(6,182,212,.4)}.border-emerald-300{--tw-border-opacity:1;border-color:rgb(110 231 183/var(--tw-border-opacity,1))}.border-emerald-400{--tw-border-opacity:1;border-color:rgb(52 211 153/var(--tw-border-opacity,1))}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129/var(--tw-border-opacity,1))}.border-emerald-500\/30{border-color:rgba(16,185,129,.3)}.border-emerald-500\/50{border-color:rgba(16,185,129,.5)}.border-rose-400{--tw-border-opacity:1;border-color:rgb(251 113 133/var(--tw-border-opacity,1))}.border-s6{--tw-border-opacity:1;border-color:rgb(45 59 85/var(--tw-border-opacity,1))}.border-s7{--tw-border-opacity:1;border-color:rgb(31 41 61/var(--tw-border-opacity,1))}.border-slate-400{--tw-border-opacity:1;border-color:rgb(148 163 184/var(--tw-border-opacity,1))}.border-stone-500{--tw-border-opacity:1;border-color:rgb(120 113 108/var(--tw-border-opacity,1))}.border-stone-700{--tw-border-opacity:1;border-color:rgb(68 64 60/var(--tw-border-opacity,1))}.border-stone-800{--tw-border-opacity:1;border-color:rgb(41 37 36/var(--tw-border-opacity,1))}.border-stone-800\/80{border-color:rgba(41,37,36,.8)}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity,1))}.\!bg-emerald-500{--tw-bg-opacity:1!important;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))!important}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36/var(--tw-bg-opacity,1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.bg-amber-500\/10{background-color:rgba(245,158,11,.1)}.bg-amber-500\/20{background-color:rgba(245,158,11,.2)}.bg-cyan-500{--tw-bg-opacity:1;background-color:rgb(6 182 212/var(--tw-bg-opacity,1))}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153/var(--tw-bg-opacity,1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.bg-emerald-500\/20{background-color:rgba(16,185,129,.2)}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94/var(--tw-bg-opacity,1))}.bg-s7{background-color:rgb(31 41 61/var(--tw-bg-opacity,1))}.bg-s7,.bg-s8{--tw-bg-opacity:1}.bg-s8{background-color:rgb(17 24 39/var(--tw-bg-opacity,1))}.bg-s8\/95{background-color:rgba(17,24,39,.95)}.bg-s9{--tw-bg-opacity:1;background-color:rgb(9 13 22/var(--tw-bg-opacity,1))}.bg-s9\/60{background-color:rgba(9,13,22,.6)}.bg-slate-300{--tw-bg-opacity:1;background-color:rgb(203 213 225/var(--tw-bg-opacity,1))}.bg-slate-300\/80{background-color:rgba(203,213,225,.8)}.bg-slate-400{--tw-bg-opacity:1;background-color:rgb(148 163 184/var(--tw-bg-opacity,1))}.bg-slate-500{--tw-bg-opacity:1;background-color:rgb(100 116 139/var(--tw-bg-opacity,1))}.bg-slate-600{--tw-bg-opacity:1;background-color:rgb(71 85 105/var(--tw-bg-opacity,1))}.bg-stone-900{--tw-bg-opacity:1;background-color:rgb(28 25 23/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.p-1{padding:.25rem}.p-1\.5{padding:.375rem}.p-2{padding:.5rem}.p-3{padding:.75rem}.p-4{padding:1rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0{padding-top:0;padding-bottom:0}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-1{padding-bottom:.25rem}.pb-2{padding-bottom:.5rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.font-sans{font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.text-6xl{font-size:3.75rem;line-height:1}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-normal{font-weight:400}.font-semibold{font-weight:600}.leading-4{line-height:1rem}.\!text-slate-950{--tw-text-opacity:1!important;color:rgb(2 6 23/var(--tw-text-opacity,1))!important}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77/var(--tw-text-opacity,1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36/var(--tw-text-opacity,1))}.text-cyan-300{--tw-text-opacity:1;color:rgb(103 232 249/var(--tw-text-opacity,1))}.text-cyan-300\/80{color:rgba(103,232,249,.8)}.text-emerald-200{--tw-text-opacity:1;color:rgb(167 243 208/var(--tw-text-opacity,1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183/var(--tw-text-opacity,1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.text-rose-300{--tw-text-opacity:1;color:rgb(253 164 175/var(--tw-text-opacity,1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.underline{text-decoration-line:underline}.line-through{text-decoration-line:line-through}.accent-emerald-400{accent-color:#34d399}.accent-emerald-500{accent-color:#10b981}.opacity-15{opacity:.15}.opacity-25{opacity:.25}.opacity-30{opacity:.3}.opacity-40{opacity:.4}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-1,.ring-2{box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-cyan-400{--tw-ring-opacity:1;--tw-ring-color:rgb(34 211 238/var(--tw-ring-opacity,1))}.ring-cyan-400\/70{--tw-ring-color:rgba(34,211,238,.7)}.ring-white{--tw-ring-opacity:1;--tw-ring-color:rgb(255 255 255/var(--tw-ring-opacity,1))}.blur{--tw-blur:blur(8px)}.blur,.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.hover\:border-slate-500:hover{--tw-border-opacity:1;border-color:rgb(100 116 139/var(--tw-border-opacity,1))}.hover\:border-white:hover{--tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity,1))}.hover\:opacity-90:hover{opacity:.9}.disabled\:opacity-40:disabled{opacity:.4}@media (min-width:640px){.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}@media (min-width:768px){.md\:mt-5{margin-top:1.25rem}.md\:grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}}@media (min-width:1024px){.lg\:col-span-2{grid-column:span 2/span 2}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}</style>
+<style>
+:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html,body{background:#090d16;color:#f1f5f9}
+.sc::-webkit-scrollbar{height:8px}.sc::-webkit-scrollbar-thumb{background:#334155;border-radius:4px}
+.fw{border-right:2px solid #94a3b8}.nut{border-right:7px solid #e2e8f0}
+.dot{width:11px;height:11px;border-radius:9999px;background:#64748b;opacity:.6;position:absolute;top:100%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.nb{transition:transform .15s}.nb:hover{transform:scale(1.18)}
+@keyframes pg{50%{box-shadow:0 0 18px #f59e0b}}.rg{animation:pg 2.5s infinite}
+.mel{outline:3px solid #fff;transform:scale(1.5);z-index:30}
+.tb.on{border-color:#fbbf24;background:#f59e0b22}
+.bd{width:10px;height:10px;border-radius:9999px;background:#2d3b55}.bd.ac{background:#475569}.bd.on{background:#34d399}.bd.ac.on{background:#f59e0b}
+.tb span.sel{background:#f59e0b;color:#090d16}.ed .tb span{cursor:pointer}.ed .tb span:hover{outline:1px solid #94a3b8}
+.lh .fw{border-right:0;border-left:2px solid #94a3b8}.lh .nut{border-right:0;border-left:7px solid #e2e8f0}
+@media (prefers-reduced-motion:reduce){.rg{animation:none}}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #34d399}
+</style>
+</head>
+<body class="min-h-screen font-sans">
+<header class="sticky top-0 z-40 bg-s8/95 border-b border-s7 px-3 py-2.5">
+ <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+  <div><h1 class="text-xl font-extrabold text-amber-400">LubenoGuitar</h1><p class="text-xs text-slate-400">Stupnice, sprievod a melódie</p></div>
+  <div class="flex items-center gap-2 flex-wrap">
+   <button id="lang" aria-label="Jazyk / Language" class="px-2 py-1 text-xs font-bold rounded bg-s7 border border-s6">EN</button>
+   <div id="beats" class="flex items-center gap-1" aria-hidden="true"></div>
+   <button id="play" class="px-4 py-2 rounded-xl font-semibold bg-emerald-500 text-slate-950">▶ Spustiť sprievod</button>
+   <button id="met" class="px-3 py-2 rounded-xl font-semibold bg-s7 border border-s6 text-sm">Metronóm</button>
+   <label class="text-xs text-slate-300 flex items-center gap-1">BPM <input id="bpm" type="number" min="40" max="240" value="100" class="w-16 bg-s9 text-amber-400 font-bold text-center rounded border border-s6 py-1"></label>
+   <button id="tap" class="px-2 py-1 text-xs rounded bg-s7 border border-s6">Tap</button><label class="text-xs text-slate-300 flex items-center gap-1">Hlasitosť <input id="vol" type="range" min="0" max="1" step=".05" value=".75" class="w-20 accent-emerald-400"></label>
+  </div>
+ </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-3 py-4 space-y-4">
+ <!-- Fretboard is shared by all tabs -->
+ <section class="bg-s8 border border-s7 rounded-2xl p-3">
+  <div class="flex flex-wrap items-center justify-between gap-2 mb-2 text-xs text-slate-400">
+   <div>Tóny: <b id="snotes" class="text-emerald-300 font-mono"></b> · Vzorec: <b id="sform" class="text-cyan-300 font-mono"></b></div>
+   <div id="nowplaying" class="hidden text-amber-400 font-semibold"></div>
+   <div class="flex gap-3"><span><i class="inline-block w-3 h-3 rounded-full bg-amber-500"></i> Root</span><span><i class="inline-block w-3 h-3 rounded-full bg-emerald-500"></i> Tercia</span><span><i class="inline-block w-3 h-3 rounded-full bg-cyan-500"></i> Kvinta</span></div>
+  </div>
+  <div class="overflow-x-auto sc pb-2"><div id="fb" class="min-w-[900px] select-none bg-stone-900 rounded-xl border-2 border-stone-800"></div></div>
+ </section>
+
+ <nav class="flex gap-1.5 bg-s8 p-1.5 rounded-xl border border-s7 w-fit max-w-full overflow-x-auto" id="tabs">
+  <button data-tab="scales" class="px-4 py-2 text-sm font-semibold rounded-lg">Stupnice</button>
+  <button data-tab="backing" class="px-4 py-2 text-sm font-semibold rounded-lg">Sprievod</button>
+  <button data-tab="quiz" class="px-4 py-2 text-sm font-semibold rounded-lg">Kvíz</button>
+  <button data-tab="tuner" class="px-4 py-2 text-sm font-semibold rounded-lg">Ladička</button>
+ </nav>
+
+ <section id="t-scales" class="bg-s8 border border-s7 rounded-2xl p-4">
+  <div class="grid grid-cols-2 md:grid-cols-6 gap-3 text-xs text-slate-400">
+   <label>Základný tón<select id="root" class="w-full mt-1 bg-s9 border border-s6 rounded-lg px-2 py-1.5 text-sm font-bold text-amber-400"></select></label>
+   <label class="col-span-2">Stupnica<select id="scale" class="w-full mt-1 bg-s9 border border-s6 rounded-lg px-2 py-1.5 text-sm font-bold text-emerald-400"></select></label>
+   <label>Pozícia<select id="box" class="w-full mt-1 bg-s9 border border-s6 rounded-lg px-2 py-1.5 text-sm text-cyan-300"><option value="0">Celý hmatník</option><option value="1">Pozícia 1</option><option value="2">Pozícia 2</option><option value="3">Pozícia 3</option><option value="4">Pozícia 4</option><option value="5">Pozícia 5</option></select></label>
+   <label>Značky<select id="lab" class="w-full mt-1 bg-s9 border border-s6 rounded-lg px-2 py-1.5 text-sm text-slate-200"><option value="notes">Tóny</option><option value="int">Intervaly</option><option value="dots">Len bodky</option></select></label>
+   <label>Ladenie<select id="tun" class="w-full mt-1 bg-s9 border border-s6 rounded-lg px-2 py-1.5 text-sm text-slate-200"><option value="standard">Standard</option><option value="drop_d">Drop D</option><option value="dadgad">DADGAD</option><option value="half">Pol tónu dole</option></select></label>
+   <label>Názvy tónov<select id="names" class="w-full mt-1 bg-s9 border border-s6 rounded-lg px-2 py-1.5 text-sm text-slate-200"><option value="auto">Podľa tóniny</option><option value="sharp">Krížiky (#)</option><option value="flat">Béčka (b)</option></select></label>
+   <label class="flex items-center gap-2 md:mt-5 text-sm text-slate-300"><input type="checkbox" id="hname" class="accent-emerald-500"> H namiesto B</label>
+   <label>Kapodaster<select id="capo" class="w-full mt-1 bg-s9 border border-s6 rounded-lg px-2 py-1.5 text-sm text-slate-200"></select></label>
+   <label class="flex items-center gap-2 md:mt-5 text-sm text-slate-300"><input type="checkbox" id="left" class="accent-emerald-500"> Pre ľavákov</label>
+  </div>
+  <p class="text-xs text-slate-500 mt-3">Klikni na tón pre zvuk. Pozícia ukazuje 5 pražcov od zvoleného stupňa stupnice na najnižšej strune.</p>
+ </section>
+
+ <section id="t-backing" class="hidden grid lg:grid-cols-3 gap-4">
+  <div class="bg-s8 border border-s7 rounded-2xl p-4 space-y-2 self-start" id="presets"></div>
+  <div class="lg:col-span-2 bg-s8 border border-s7 rounded-2xl p-4 space-y-4">
+   <div class="flex items-center justify-between gap-2">
+    <div><h2 class="font-bold">Vlastná postupnosť</h2><p class="text-xs text-slate-400">Vyber takt a zmeň akord (2 až 12 taktov)</p></div>
+    <div class="flex gap-2"><button id="addbar" class="px-3 py-1 text-xs font-bold rounded-lg bg-s7 border border-s6">+ Takt</button><button id="rembar" class="px-3 py-1 text-xs font-bold rounded-lg bg-s7 border border-s6 text-rose-300">− Takt</button></div>
+   </div>
+   <div class="bg-s9 border border-s7 rounded-xl p-3 space-y-2 text-xs text-slate-300">
+    <div class="flex flex-wrap items-center gap-2"><b>Časti piesne</b><div id="secs" class="flex flex-wrap gap-1"></div>
+     <button id="secadd" class="px-2 py-1 rounded bg-s7 border border-s6">+ Časť</button><button id="secdel" class="px-2 py-1 rounded bg-s7 border border-s6 text-rose-300">− Časť</button>
+     <label class="flex items-center gap-1 ml-auto">Názov <input id="secname" aria-label="Názov časti" maxlength="12" class="w-24 bg-s8 border border-s6 rounded px-2 py-1"></label></div>
+    <div class="flex flex-wrap items-center gap-2"><label class="flex items-center gap-1"><input type="checkbox" id="songmode" class="accent-emerald-500"> hrať celú pieseň v poradí</label>
+     <input id="ord" aria-label="Poradie častí" placeholder="A A B A" class="flex-1 min-w-[8rem] bg-s8 border border-s6 rounded px-2 py-1 font-mono text-cyan-300"></div>
+    <p class="text-[11px] text-slate-500">Každá časť má vlastné takty a melódiu. Poradie zapíš názvami častí oddelenými medzerou, napr. A A B A. Bez zaškrtnutia sa opakuje len zobrazená časť.</p>
+   </div>
+   <div class="bg-s9 border border-s7 rounded-xl p-3 flex flex-wrap items-center gap-2 text-xs text-slate-400">
+    <span>Tónina</span>
+    <select id="kroot" aria-label="Tónina" class="bg-s8 border border-s6 rounded px-2 py-1 font-bold text-amber-300"></select>
+    <select id="kmode" aria-label="Tónorod" class="bg-s8 border border-s6 rounded px-2 py-1 font-bold text-emerald-300"><option value="maj">dur</option><option value="min">mol</option></select>
+    <input id="degs" aria-label="Postupnosť v stupňoch" placeholder="I V vi IV" class="flex-1 min-w-[10rem] bg-s8 border border-s6 rounded px-2 py-1 font-mono text-cyan-300">
+    <button id="degapply" class="px-3 py-1 bg-emerald-500 text-slate-950 font-bold rounded">Použiť stupne</button>
+    <p class="w-full text-[11px] text-slate-500">Medzera = nový takt, čiarka = dva akordy v takte (napr. I,V vi IV V7). Malé písmená = mol. Zmena tóniny postupnosť transponuje.</p>
+   </div>
+   <div id="bars" class="grid grid-cols-3 sm:grid-cols-4 gap-2"></div>
+   <div id="dias" class="flex flex-wrap gap-2"></div>
+   <div class="bg-s9 border border-s7 rounded-xl p-3 flex flex-wrap items-center gap-2 text-xs text-slate-400">
+    <span>Takt <b id="ebar" class="text-amber-400">1</b></span>
+    <select id="eroot" aria-label="Základný tón akordu" class="bg-s8 border border-s6 rounded px-2 py-1 font-bold text-amber-300"></select>
+    <select id="etype" aria-label="Typ akordu" class="bg-s8 border border-s6 rounded px-2 py-1 font-bold text-emerald-300"></select>
+    <label class="flex items-center gap-1 ml-2"><input type="checkbox" id="e2on" class="accent-emerald-500"> 2. akord v polovici taktu</label>
+    <select id="eroot2" aria-label="Základný tón 2. akordu" class="bg-s8 border border-s6 rounded px-2 py-1 font-bold text-amber-300 disabled:opacity-40"></select>
+    <select id="etype2" aria-label="Typ 2. akordu" class="bg-s8 border border-s6 rounded px-2 py-1 font-bold text-emerald-300 disabled:opacity-40"></select>
+    <button id="eapply" class="ml-auto px-3 py-1 bg-emerald-500 text-slate-950 font-bold rounded">Použiť na takt</button>
+   </div>
+   <div class="flex flex-wrap items-center gap-2 text-xs text-slate-300">
+    <label>Groove <select id="groove" class="ml-1 bg-s9 border border-s6 rounded px-2 py-1"></select></label>
+    <label><input type="checkbox" id="cnt" class="accent-emerald-500"> predtakt</label>
+    <button id="trm" class="px-2 py-1 rounded bg-s7 border border-s6">Tónina −½</button><button id="trp" class="px-2 py-1 rounded bg-s7 border border-s6">Tónina +½</button>
+   </div>
+   <div class="p-3 rounded-xl bg-s9 border border-s7 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-300">
+    <b>Cvičenie</b>
+    <div class="flex items-center gap-1"><label class="flex items-center gap-1"><input type="checkbox" id="lpon" class="accent-emerald-500"> slučka od taktu</label><input id="lpa" aria-label="Slučka od taktu" type="number" min="1" max="12" value="1" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"> po <input id="lpb" aria-label="Slučka po takt" type="number" min="1" max="12" value="4" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"></div>
+    <div class="flex flex-wrap items-center gap-1"><label class="flex items-center gap-1"><input type="checkbox" id="spon" class="accent-emerald-500"> zrýchliť o</label><input id="spinc" aria-label="O koľko BPM zrýchliť" type="number" min="1" max="20" value="2" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"> BPM každé <input id="spev" aria-label="Po koľkých kolách zrýchliť" type="number" min="1" max="16" value="2" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"> kolá, najviac po <input id="spmax" aria-label="Najvyššie tempo" type="number" min="40" max="240" value="160" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"> BPM</div>
+   </div>
+   <div class="p-3 rounded-xl bg-s9 border border-s7">
+    <div class="text-xs font-bold text-slate-300 mb-2">Mix stôp <span class="font-normal text-slate-500">(klik na názov stopu stlmí)</span></div>
+    <div id="mix" class="flex flex-wrap gap-x-4 gap-y-2 text-xs"></div>
+   </div>
+   <div class="p-3 rounded-xl bg-s9 border border-s7 flex flex-wrap items-center gap-2 text-xs text-slate-300">
+    <b>Uložené postupnosti</b>
+    <input id="sname" aria-label="Názov na uloženie" placeholder="Názov" maxlength="30" class="w-32 bg-s8 border border-s6 rounded px-2 py-1">
+    <button id="svp" class="px-2 py-1 rounded bg-s7 border border-s6">Uložiť</button>
+    <select id="slots" aria-label="Uložené postupnosti" class="ml-auto bg-s8 border border-s6 rounded px-2 py-1 max-w-[10rem]"></select>
+    <button id="ldp" class="px-2 py-1 rounded bg-s7 border border-s6">Načítať</button>
+    <button id="dlp" class="px-2 py-1 rounded bg-s7 border border-s6 text-rose-300">Zmazať</button>
+    <div class="w-full flex flex-wrap items-center gap-2"><button id="share" class="px-2 py-1 rounded bg-s7 border border-s6">Zdieľať odkaz</button><input id="linkin" aria-label="Vlož odkaz alebo kód" placeholder="Vlož odkaz alebo kód" class="flex-1 min-w-[8rem] bg-s8 border border-s6 rounded px-2 py-1"><button id="linkgo" class="px-2 py-1 rounded bg-s7 border border-s6">Otvoriť odkaz</button></div>
+    <p class="w-full text-[11px] text-slate-500">Rozpracovaný stav sa ukladá automaticky a po otvorení sa obnoví.</p>
+   </div>
+   <div class="p-3 rounded-xl bg-s9 border border-s7 space-y-2"><div class="flex flex-wrap items-center gap-2 text-xs text-slate-300"><b>Melódia</b><select id="mstyle" class="bg-s8 border border-s6 rounded px-2 py-1"><option value="pent">Pentatonika</option><option value="lyric">Spevná linka</option><option value="blues">Blues</option></select><select id="msound" aria-label="Zvuk melódie" class="bg-s8 border border-s6 rounded px-2 py-1"><option value="ac">Akustická gitara</option><option value="mute">Tlmená gitara</option><option value="clean">Elektrická čistá</option><option value="dist">Elektrická skreslená</option><option value="flute">Flauta</option><option value="epiano">Elektrické piano</option></select><label><input type="checkbox" id="lock" class="accent-emerald-500"> zamknúť</label><button id="newmel" class="ml-auto px-3 py-1 bg-emerald-500 text-slate-950 font-bold rounded">Nová melódia</button><button id="savetab" class="px-3 py-1 bg-s7 border border-s6 rounded">Uložiť tabulatúru (.txt)</button><button id="savemid" class="px-3 py-1 bg-s7 border border-s6 rounded">Uložiť MIDI (.mid)</button><button id="edbtn" class="px-3 py-1 rounded border bg-s7 border-s6">Upraviť melódiu</button></div>
+    <div id="edbar" class="hidden flex flex-wrap items-center gap-3 text-xs text-slate-300 p-2 rounded-lg bg-s8 border border-amber-500/40">
+     <span id="edpos" class="font-mono text-amber-300"></span>
+     <button id="eddel" class="px-2 py-1 rounded bg-s7 border border-s6 text-rose-300">Zmazať tón</button>
+     <label>Technika <select id="edart" class="ml-1 bg-s9 border border-s6 rounded px-2 py-1 disabled:opacity-40"><option value="">žiadna</option><option value="h">h hammer-on</option><option value="p">p pull-off</option><option value="/">/ slide nahor</option><option value="\">\ slide nadol</option><option value="b">b ohyb</option></select></label>
+     <label class="flex items-center gap-1"><input type="checkbox" id="edlen" class="accent-emerald-500"> dlhý tón (2 osminy)</label>
+     <p class="w-full text-[11px] text-slate-500">Klikni do tabulatúry na miesto, ktoré chceš zmeniť. Potom klikni na tón na hmatníku (kurzor sa posunie ďalej) alebo napíš číslo pražca. Šípky posúvajú kurzor, Delete maže.</p>
+    </div><div class="overflow-x-auto sc"><div class="w-full"><div id="tab" class="flex flex-wrap gap-2"></div><p class="text-[11px] text-slate-500 mt-1">1 stĺpec = osmina · h hammer-on · p pull-off · / \ slide · b ohyb · trojica = 3 tóny v šírke dvoch stĺpcov</p></div></div></div>
+   <div class="p-3 rounded-xl bg-s9 border border-emerald-500/30">
+    <label class="flex items-center gap-2 text-xs text-slate-300 mb-2"><input type="checkbox" id="autosync" checked class="accent-emerald-500"> Hmatník sleduje akord počas hrania</label>
+    <label class="flex items-center gap-2 text-xs text-slate-300 mb-2">Tóny akordu na hmatníku <select id="arp" class="bg-s8 border border-s6 rounded px-2 py-1"><option value="">nezvýrazňovať</option><option value="all">celý hmatník</option><option value="C">tvar C (CAGED)</option><option value="A">tvar A (CAGED)</option><option value="G">tvar G (CAGED)</option><option value="E">tvar E (CAGED)</option><option value="D">tvar D (CAGED)</option></select></label>
+    <div id="sugg" class="text-sm"></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="t-quiz" class="hidden bg-s8 border border-s7 rounded-2xl p-4 space-y-3">
+  <div class="flex flex-wrap items-center gap-3 text-xs text-slate-300">
+   <label>Typ <select id="qmode" class="ml-1 bg-s9 border border-s6 rounded px-2 py-1"><option value="find">Nájdi tón</option><option value="int">Urči interval</option></select></label>
+   <button id="qnext" class="px-3 py-1 bg-emerald-500 text-slate-950 font-bold rounded">Ďalšia otázka</button>
+   <span class="ml-auto">Správne: <b id="qok" class="text-emerald-300">0</b> · Chyby: <b id="qbad" class="text-rose-300">0</b></span>
+  </div>
+  <p id="qtext" class="text-lg font-bold text-amber-400"></p>
+  <div id="qans" class="flex flex-wrap gap-2"></div>
+  <p class="text-xs text-slate-500">Hmatník je počas kvízu bez popisov. Hrá sa na pražcoch 0 až 12.</p>
+ </section>
+
+ <section id="t-tuner" class="hidden bg-s8 border border-s7 rounded-2xl p-4 space-y-4">
+  <div class="flex flex-wrap items-center gap-3"><button id="tunbtn" class="px-4 py-2 rounded-xl font-semibold bg-emerald-500 text-slate-950">Zapnúť mikrofón</button><span id="tunmsg" class="text-xs text-slate-400">Zahraj jednu strunu blízko mikrofónu.</span></div>
+  <div class="text-center"><div id="tunnote" class="text-6xl font-extrabold text-slate-500">–</div><div id="tuncents" class="text-sm text-slate-400 h-5"></div></div>
+  <div class="relative h-4 max-w-xl mx-auto rounded-full bg-s9 border border-s6"><div class="absolute top-0 bottom-0 left-1/2 w-px bg-slate-400"></div><div id="tunneedle" class="absolute -top-1 -bottom-1 w-1.5 -translate-x-1/2 rounded bg-slate-500" style="left:50%"></div></div>
+  <div class="flex justify-between max-w-xl mx-auto text-[11px] text-slate-500"><span>−50 centov (nízko)</span><span>+50 centov (vysoko)</span></div>
+  <div id="tunstr" class="flex flex-wrap justify-center gap-2"></div>
+  <p class="text-xs text-slate-500 text-center">Struny podľa zvoleného ladenia, od basovej po tenkú. Klik na strunu prehrá referenčný tón.</p>
+ </section>
+</main>
+<div id="toast" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const N=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+const FL=['C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B'];
+const IV=['1','b2','2','b3','3','4','b5','5','b6','6','b7','7'];
+const TUN={standard:[64,59,55,50,45,40],drop_d:[64,59,55,50,45,38],dadgad:[62,57,55,50,45,38],half:[63,58,54,49,44,39]};
+// [name, intervals, semitones from the parent major key's tonic up to this root (decides sharps vs flats)]
+const SC={minor_pentatonic:['Molová pentatonika',[0,3,5,7,10],9],major_pentatonic:['Durová pentatonika',[0,2,4,7,9],0],blues:['Bluesová',[0,3,5,6,7,10],9],ionian:['Jónsky (dur)',[0,2,4,5,7,9,11],0],dorian:['Dórsky',[0,2,3,5,7,9,10],2],phrygian:['Frygický',[0,1,3,5,7,8,10],4],lydian:['Lydický',[0,2,4,6,7,9,11],5],mixolydian:['Mixolydický',[0,2,4,5,7,9,10],7],aeolian:['Eolský (mol)',[0,2,3,5,7,8,10],9],locrian:['Lokrický',[0,1,3,5,6,8,10],11],harmonic_minor:['Harmonická mol',[0,2,3,5,7,8,11],9],melodic_minor:['Melodická mol',[0,2,3,5,7,9,11],9],altered:['Alterovaná',[0,1,3,4,6,8,10],8],diminished:['Zmenšená (celý–pol)',[0,2,3,5,6,8,9,11],9]};
+const CH={maj:['',[0,4,7]],m:['m',[0,3,7]],'7':['7',[0,4,7,10]],maj7:['maj7',[0,4,7,11]],m7:['m7',[0,3,7,10]],m7b5:['m7b5',[0,3,6,10]],dim7:['dim7',[0,3,6,9]],sus4:['sus4',[0,5,7]],'9':['9',[0,4,7,10,14]],m9:['m9',[0,3,7,10,14]],'13':['13',[0,4,10,14,21]],'7alt':['7alt',[0,4,8,10,13]]};
+const MINOR=['m','m7','m9','m7b5','dim7'];
+const ci=n=>N.indexOf(n), cn=i=>N[((i%12)+12)%12], mf=m=>440*Math.pow(2,(m-69)/12);
+const mk=(r,t)=>({r,t});
+const lab=c=>c.r+CH[c.t][0], barLab=b=>b.map(lab).join('|');   // internal keys, always sharps
+/* ---------- NOTE NAMES ---------- */
+const OPT={names:'auto',h:false,lang:'sk'};
+/* ---------- LANGUAGE: Slovak is the source text, EN maps it to English ---------- */
+const EN={
+ // header, fretboard, tabs
+ 'Stupnice, sprievod a melódie':'Scales, backing and melodies','▶ Spustiť sprievod':'▶ Play backing','■ Zastaviť':'■ Stop','Metronóm':'Metronome','Hlasitosť':'Volume','Tóny:':'Notes:','· Vzorec:':'· Formula:','Tercia':'Third','Kvinta':'Fifth',
+ 'Stupnice':'Scales','Sprievod':'Backing','Kvíz':'Quiz','Ladička':'Tuner',
+ // scales tab
+ 'Základný tón':'Root note','Stupnica':'Scale','Pozícia':'Position','Celý hmatník':'Whole fretboard','Pozícia 1':'Position 1','Pozícia 2':'Position 2','Pozícia 3':'Position 3','Pozícia 4':'Position 4','Pozícia 5':'Position 5',
+ 'Značky':'Labels','Tóny':'Notes','Intervaly':'Intervals','Len bodky':'Dots only','Ladenie':'Tuning','Pol tónu dole':'Half step down','Názvy tónov':'Note names','Podľa tóniny':'By key','Krížiky (#)':'Sharps (#)','Béčka (b)':'Flats (b)',
+ 'H namiesto B':'H instead of B (German naming)','Kapodaster':'Capo','bez kapodastra':'no capo','Pre ľavákov':'Left-handed',
+ 'Klikni na tón pre zvuk. Pozícia ukazuje 5 pražcov od zvoleného stupňa stupnice na najnižšej strune.':'Click a note to hear it. A position shows 5 frets starting from the chosen scale degree on the lowest string.',
+ // backing tab
+ 'Vlastná postupnosť':'Custom progression','Vyber takt a zmeň akord (2 až 12 taktov)':'Pick a bar and change its chord (2 to 12 bars)','+ Takt':'+ Bar','− Takt':'− Bar','Tónina':'Key','Tónorod':'Mode','dur':'major','mol':'minor',
+ 'Postupnosť v stupňoch':'Progression in degrees','Použiť stupne':'Apply degrees',
+ 'Medzera = nový takt, čiarka = dva akordy v takte (napr. I,V vi IV V7). Malé písmená = mol. Zmena tóniny postupnosť transponuje.':'Space = new bar, comma = two chords in one bar (e.g. I,V vi IV V7). Lowercase = minor. Changing the key transposes the progression.',
+ 'Takt':'Bar','takt':'bar','doba':'beat','Základný tón akordu':'Chord root','Typ akordu':'Chord type','2. akord v polovici taktu':'2nd chord at mid-bar','Základný tón 2. akordu':'Root of the 2nd chord','Typ 2. akordu':'Type of the 2nd chord','Použiť na takt':'Apply to bar',
+ 'predtakt':'count-in','Tónina −½':'Key −½','Tónina +½':'Key +½','Cvičenie':'Practice','slučka od taktu':'loop from bar','po':'to','Slučka od taktu':'Loop from bar','Slučka po takt':'Loop to bar',
+ 'zrýchliť o':'speed up by','BPM každé':'BPM every','kolá, najviac po':'laps, up to','O koľko BPM zrýchliť':'BPM to add','Po koľkých kolách zrýchliť':'Laps between speed-ups','Najvyššie tempo':'Top tempo',
+ 'Mix stôp':'Track mix','(klik na názov stopu stlmí)':'(click a name to mute the track)','Bicie':'Drums','Basa':'Bass','Akordy':'Chords','Melódia':'Melody','Klik':'Click',
+ 'Uložené postupnosti':'Saved progressions','Názov na uloženie':'Name to save as','Názov':'Name','Uložiť':'Save','Načítať':'Load','Zmazať':'Delete','— nič uložené —':'— nothing saved —',
+ 'Rozpracovaný stav sa ukladá automaticky a po otvorení sa obnoví.':'Your work is saved automatically and restored when you open the app again.',
+ 'Zvuk melódie':'Melody sound','Akustická gitara':'Acoustic guitar','Tlmená gitara':'Muted guitar','Elektrická čistá':'Clean electric','Elektrická skreslená':'Overdriven electric','Flauta':'Flute','Elektrické piano':'Electric piano',
+ 'Pentatonika':'Pentatonic','Spevná linka':'Lyrical line','zamknúť':'lock','Nová melódia':'New melody','Uložiť tabulatúru (.txt)':'Save tab (.txt)','Uložiť MIDI (.mid)':'Save MIDI (.mid)',
+ '1 stĺpec = osmina · h hammer-on · p pull-off · / \\ slide · b ohyb · trojica = 3 tóny v šírke dvoch stĺpcov':'1 column = eighth note · h hammer-on · p pull-off · / \\ slide · b bend · triplet = 3 notes across two columns',
+ 'Hmatník sleduje akord počas hrania':'Fretboard follows the chord while playing','Tóny akordu na hmatníku':'Chord tones on the fretboard','nezvýrazňovať':'off','celý hmatník':'whole fretboard',
+ 'tvar C (CAGED)':'C shape (CAGED)','tvar A (CAGED)':'A shape (CAGED)','tvar G (CAGED)':'G shape (CAGED)','tvar E (CAGED)':'E shape (CAGED)','tvar D (CAGED)':'D shape (CAGED)',
+ 'K akordu':'Over','sedí:':'play:','bez tvaru':'no shape','tabulatúra':'tablature','1 stĺpec = osmina':'1 column = eighth note',
+ // sections, melody editor, sharing
+ 'Časti piesne':'Song sections','+ Časť':'+ Section','− Časť':'− Section','Názov časti':'Section name','hrať celú pieseň v poradí':'play the whole song in order','Poradie častí':'Section order','Poradie':'Order',
+ 'Každá časť má vlastné takty a melódiu. Poradie zapíš názvami častí oddelenými medzerou, napr. A A B A. Bez zaškrtnutia sa opakuje len zobrazená časť.':'Each section has its own bars and melody. Write the order as section names separated by spaces, e.g. A A B A. When unchecked, only the section shown is looped.',
+ 'Maximum je 6 častí':'The maximum is 6 sections','Musí ostať aspoň jedna časť':'At least one section must remain','Názov je prázdny alebo už existuje':'The name is empty or already used','Neznáma časť: ':'Unknown section: ',
+ 'Upraviť melódiu':'Edit melody','Zmazať tón':'Delete note','Technika':'Technique','žiadna':'none','/ slide nahor':'/ slide up','\\ slide nadol':'\\ slide down','b ohyb':'b bend','dlhý tón (2 osminy)':'long note (2 eighths)','osmina':'eighth','struna':'string',
+ 'Klikni do tabulatúry na miesto, ktoré chceš zmeniť. Potom klikni na tón na hmatníku (kurzor sa posunie ďalej) alebo napíš číslo pražca. Šípky posúvajú kurzor, Delete maže.':'Click the spot in the tablature you want to change. Then click a note on the fretboard (the cursor moves on) or type a fret number. Arrow keys move the cursor, Delete clears.',
+ 'Zdieľať odkaz':'Share link','Vlož odkaz alebo kód':'Paste a link or code','Otvoriť odkaz':'Open link','Odkaz skopírovaný':'Link copied','Odkaz je v poli, skopíruj ho':'The link is in the field, copy it','Odkaz načítaný':'Link loaded','Odkaz sa nepodarilo načítať':'The link could not be loaded',
+ // quiz, tuner
+ 'Typ':'Type','Nájdi tón':'Find the note','Urči interval':'Name the interval','Ďalšia otázka':'Next question','Správne:':'Correct:','Správne':'Correct','· Chyby:':'· Mistakes:',
+ 'Hmatník je počas kvízu bez popisov. Hrá sa na pražcoch 0 až 12.':'The fretboard has no labels during the quiz. Frets 0 to 12 are in play.',
+ 'Nájdi všetky tóny':'Find every','Výborne, všetky nájdené!':'Well done, all found!','Aký interval je medzi oranžovým a bielym tónom?':'Which interval lies between the orange and the white note?',
+ 'malá sekunda':'minor second','veľká sekunda':'major second','malá tercia':'minor third','veľká tercia':'major third','čistá kvarta':'perfect fourth','tritonus':'tritone','čistá kvinta':'perfect fifth','malá sexta':'minor sixth','veľká sexta':'major sixth','malá septima':'minor seventh','veľká septima':'major seventh','oktáva':'octave',
+ 'Zapnúť mikrofón':'Turn microphone on','Vypnúť mikrofón':'Turn microphone off','Zahraj jednu strunu blízko mikrofónu.':'Play a single string close to the microphone.','Mikrofón je vypnutý.':'The microphone is off.',
+ 'Mikrofón nie je dostupný. Povoľ ho v prehliadači a skús to znova.':'The microphone is not available. Allow it in the browser and try again.',
+ '−50 centov (nízko)':'−50 cents (flat)','+50 centov (vysoko)':'+50 cents (sharp)','naladené':'in tune','centov nízko – pritiahni':'cents flat – tighten','centov vysoko – povoľ':'cents sharp – loosen',
+ 'Struny podľa zvoleného ladenia, od basovej po tenkú. Klik na strunu prehrá referenčný tón.':'Strings of the selected tuning, lowest to highest. Click a string to hear its reference pitch.',
+ // scales, grooves, presets
+ 'Molová pentatonika':'Minor pentatonic','Durová pentatonika':'Major pentatonic','Bluesová':'Blues','Jónsky (dur)':'Ionian (major)','Dórsky':'Dorian','Frygický':'Phrygian','Lydický':'Lydian','Mixolydický':'Mixolydian','Eolský (mol)':'Aeolian (minor)','Lokrický':'Locrian','Harmonická mol':'Harmonic minor','Melodická mol':'Melodic minor','Alterovaná':'Altered','Zmenšená (celý–pol)':'Diminished (whole–half)',
+ 'Balada':'Ballad','Valčík (3/4)':'Waltz (3/4)','Balada 6/8':'6/8 ballad','Pachelbelova postupnosť':'Pachelbel progression','12-taktový blues v A':'12-bar blues in A','Molový blues v A':'Minor blues in A','Andalúzska kadencia':'Andalusian cadence','Valčík':'Waltz',
+ // messages
+ 'Maximum je 12 taktov':'The maximum is 12 bars','Minimum sú 2 takty':'The minimum is 2 bars','Tónina −½ tónu':'Key down a half step','Tónina +½ tónu':'Key up a half step','Postupnosť musí mať 2 až 12 taktov':'A progression needs 2 to 12 bars','Postupnosť nastavená':'Progression set',
+ 'Nerozumiem stupňu: ':'Unknown degree: ','Zadaj názov':'Enter a name','Ukladanie nie je dostupné':'Saving is not available','Uložené: ':'Saved: ','Nič nie je uložené':'Nothing is saved','Načítané: ':'Loaded: ','Načítanie zlyhalo':'Loading failed','Zmazané: ':'Deleted: ','Uloženie zlyhalo':'Saving failed','Hmatník: ':'Fretboard: '
+};
+const L=s=>OPT.lang==='en'&&EN[s]||s;
+// translates the static page: text nodes and aria-label/placeholder attributes whose Slovak text is a key of EN
+function i18n(){const en=OPT.lang==='en',w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;
+ while(n=w.nextNode()){if(n._sk===undefined){const k=n.nodeValue.trim();if(!k||!(k in EN)||n.parentNode.closest('script,style'))continue;n._sk=n.nodeValue}const k=n._sk.trim();n.nodeValue=en?n._sk.replace(k,EN[k]):n._sk}
+ document.querySelectorAll('[aria-label],[placeholder]').forEach(e=>['aria-label','placeholder'].forEach(a=>{const p='_'+a;if(e[p]===undefined){const v=e.getAttribute(a);if(!v||!(v in EN))return;e[p]=v}e.setAttribute(a,en?EN[e[p]]:e[p])}))}
+const nm=(pc,flat)=>{let s=(flat?FL:N)[((pc%12)+12)%12];if(OPT.h){if(s==='B')s='H';else if(s==='Bb')s='B'}return s};
+const flatKey=pc=>[5,10,3,8,1].includes(((pc%12)+12)%12);
+const useFlat=auto=>OPT.names==='flat'||(OPT.names==='auto'&&auto);
+const dl=c=>nm(ci(c.r),SQ.flat())+CH[c.t][0];   // chord label as displayed
+/* ---------- GROOVES: m meter, h steps where the chord is strummed, sh short stabs, sw swung eighths ---------- */
+const GR={
+ rock:{n:'Rock / Pop',m:'4/4',h:[0,8]},
+ funk:{n:'Funk',m:'4/4',h:[0,6,10,13],sh:1},
+ jazz:{n:'Jazz swing',m:'4/4',h:[0,6],sw:1},
+ ballad:{n:'Balada',m:'4/4',h:[0]},
+ shuffle:{n:'Shuffle',m:'4/4',h:[0,8],sw:1},
+ bossa:{n:'Bossa nova',m:'4/4',h:[0,6,10]},
+ reggae:{n:'Reggae',m:'4/4',h:[4,12],sh:1},
+ waltz:{n:'Valčík (3/4)',m:'3/4',h:[4,8],sh:1},
+ b68:{n:'Balada 6/8',m:'6/8',h:[]}
+};
+const meter=()=>GR[SQ.groove].m, S=()=>meter()==='4/4'?16:12, splitS=()=>meter()==='6/8'?6:8, bstep=()=>meter()==='6/8'?2:4;
+const sdur=()=>60/SQ.bpm/(meter()==='6/8'?6:4);   // one step; in 6/8 the BPM counts dotted quarters
+const PRE={
+ pop:{n:'Pop / Rock',d:'C – G – Am – F',bpm:108,g:'rock',k:['C','maj'],c:[['C','maj'],['G','maj'],['A','m'],['F','maj']]},
+ pach:{n:'Pachelbelova postupnosť',d:'D A – Bm F#m – G D – G A',bpm:72,g:'ballad',k:['D','maj'],c:[[['D','maj'],['A','maj']],[['B','m'],['F#','m']],[['G','maj'],['D','maj']],[['G','maj'],['A','maj']]]},
+ doo:{n:'Balada 6/8',d:'C – Am – F – G',bpm:60,g:'b68',k:['C','maj'],c:[['C','maj'],['A','m'],['F','maj'],['G','maj']]},
+ jazz:{n:'Jazz ii–V–I',d:'Dm7 – G7 – Cmaj7 – A7alt',bpm:120,g:'jazz',k:['C','maj'],c:[['D','m7'],['G','7'],['C','maj7'],['A','7alt']]},
+ bossa:{n:'Bossa nova',d:'Cmaj7 – D7 – Dm7 – G7',bpm:130,g:'bossa',k:['C','maj'],c:[['C','maj7'],['D','7'],['D','m7'],['G','7']]},
+ blues:{n:'12-taktový blues v A',d:'A7 – D7 – E7',bpm:92,g:'shuffle',k:['A','maj'],c:[['A','7'],['D','7'],['A','7'],['A','7'],['D','7'],['D','7'],['A','7'],['A','7'],['E','7'],['D','7'],['A','7'],['E','7']]},
+ mblues:{n:'Molový blues v A',d:'Am7 – Dm7 – F7 – E7',bpm:84,g:'shuffle',k:['A','min'],c:[['A','m7'],['A','m7'],['A','m7'],['A','m7'],['D','m7'],['D','m7'],['A','m7'],['A','m7'],['F','7'],['E','7'],['A','m7'],['E','7']]},
+ andal:{n:'Andalúzska kadencia',d:'Am – G – F – E7',bpm:115,g:'rock',k:['A','min'],c:[['A','m'],['G','maj'],['F','maj'],['E','7']]},
+ funk:{n:'Neo-soul / funk',d:'Dm9 – G13',bpm:96,g:'funk',k:['D','min'],c:[['D','m9'],['G','13'],['D','m9'],['G','13']]},
+ reggae:{n:'Reggae',d:'Am – Dm – Am – Em',bpm:140,g:'reggae',k:['A','min'],c:[['A','m'],['D','m'],['A','m'],['E','m']]},
+ waltz:{n:'Valčík',d:'C – Am – Dm – G7',bpm:132,g:'waltz',k:['C','maj'],c:[['C','maj'],['A','m'],['D','m'],['G','7']]}
+};
+const preBars=p=>p.c.map(e=>(Array.isArray(e[0])?e:[e]).map(c=>mk(...c)));
+const toast=(m)=>{const t=document.createElement('div');t.className='px-4 py-2 rounded-xl border border-cyan-500/40 bg-s8 text-cyan-300 text-xs font-semibold';t.textContent=m;$('toast').appendChild(t);setTimeout(()=>t.remove(),2600)};
+const LS={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}};
+
+/* ---------- AUDIO (all sounds take an exact start time) ---------- */
+const TR={drums:'Bicie',bass:'Basa',chords:'Akordy',mel:'Melódia',click:'Klik'};
+const MIX={drums:{v:.9,m:false},bass:{v:.9,m:false},chords:{v:.8,m:false},mel:{v:.9,m:false},click:{v:.7,m:true}};
+const A={ctx:null,out:null,noise:null,bus:{},KS:{},
+ resume(){if(!this.ctx){const C=window.AudioContext||window.webkitAudioContext;this.ctx=new C();this.out=this.ctx.createGain();this.out.gain.value=+$('vol').value;this.out.connect(this.ctx.destination);
+  for(const k in MIX){this.bus[k]=this.ctx.createGain();this.bus[k].connect(this.out)}this.mix();
+  const b=this.ctx.createBuffer(1,this.ctx.sampleRate,this.ctx.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1;this.noise=b}
+  if(this.ctx.state==='suspended')this.ctx.resume()},
+ mix(){if(this.ctx)for(const k in MIX)this.bus[k].gain.setTargetAtTime(MIX[k].m?0:MIX[k].v,this.ctx.currentTime,.02)},
+ env(g,t,peak,dur,att=.01){g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(peak,t+att);g.gain.exponentialRampToValueAtTime(.0001,t+dur)},
+ osc(type,f,t,dur,peak,cut,att,dest){const c=this.ctx,o=c.createOscillator(),fl=c.createBiquadFilter(),g=c.createGain();o.type=type;o.frequency.setValueAtTime(f,t);fl.type='lowpass';fl.frequency.value=cut;this.env(g,t,peak,dur,att);o.connect(fl);fl.connect(g);g.connect(dest||this.out);o.start(t);o.stop(t+dur+.05);return o},
+ kick(t){const c=this.ctx,o=c.createOscillator(),g=c.createGain();o.frequency.setValueAtTime(140,t);o.frequency.exponentialRampToValueAtTime(32,t+.12);this.env(g,t,1,.35,.002);o.connect(g);g.connect(this.bus.drums);o.start(t);o.stop(t+.4)},
+ noiseHit(t,type,f,peak,dur){const c=this.ctx,n=c.createBufferSource(),fl=c.createBiquadFilter(),g=c.createGain();n.buffer=this.noise;fl.type=type;fl.frequency.value=f;this.env(g,t,peak,dur,.002);n.connect(fl);fl.connect(g);g.connect(this.bus.drums);n.start(t);n.stop(t+dur+.02)},
+ snare(t,p=.8){this.noiseHit(t,'bandpass',1800,p,.22);this.osc('triangle',190,t,.12,p*.6,3000,.002,this.bus.drums)},
+ rim(t){this.noiseHit(t,'bandpass',3200,.35,.04);this.osc('triangle',820,t,.05,.35,4000,.001,this.bus.drums)},
+ hat(t,open,p=.3){this.noiseHit(t,'highpass',7500,p,open?.3:.06)},
+ bass(f,t,d){this.osc('triangle',f,t,d,.7,320,.02,this.bus.bass)},
+ click(t,acc,dest){this.osc('square',acc===2?1500:acc?1150:850,t,.05,.35,5000,.002,dest)},
+ // Karplus-Strong plucked string, rendered once per pitch; r corrects the pitch for the integer delay length. br = brighter, longer-ringing electric string
+ ks(m,br){const key=m+(br?'b':'');if(this.KS[key])return this.KS[key];const sr=this.ctx.sampleRate,f=mf(m),n=Math.max(2,Math.round(sr/f+.5)),len=sr*2.5|0,b=this.ctx.createBuffer(1,len,sr),d=b.getChannelData(0);
+  let p=0,avg=0,pk=0;for(let i=0;i<n;i++){p+=(br?.9:.55)*(Math.random()*2-1-p);d[i]=p;avg+=p}avg/=n;for(let i=0;i<n;i++){d[i]-=avg;pk=Math.max(pk,Math.abs(d[i]))}for(let i=0;i<n;i++)d[i]/=pk;
+  const dmp=.5*Math.pow(10,-3/(f*(br?6:3.5)));for(let i=n;i<len;i++)d[i]=dmp*(d[i-n]+d[i-n+1]);
+  return this.KS[key]={b,r:f*(n-.5)/sr}},
+ curve(){if(!this.cv){this.cv=new Float32Array(1024);for(let i=0;i<1024;i++)this.cv[i]=Math.tanh((i/1023*2-1)*3)}return this.cv},
+ // o: soft (no pick attack), slide (start pitch ratio), bend, br (electric string), mute (palm mute), dist (overdrive)
+ gtr(m,t,dur,peak,dest,o={}){const c=this.ctx,k=this.ks(m,o.br),s=c.createBufferSource(),g=c.createGain();s.buffer=k.b;this.glide([[s.playbackRate,k.r]],t,dur,o);
+  g.gain.setValueAtTime(peak,t);g.gain.setTargetAtTime(0,o.mute?t+.02:t+dur,o.mute?.07:.06);let n=s;
+  if(o.mute){const f=c.createBiquadFilter();f.type='lowpass';f.frequency.value=1300;n.connect(f);n=f}
+  if(o.dist){const pre=c.createGain(),ws=c.createWaveShaper(),f=c.createBiquadFilter();pre.gain.value=14;ws.curve=this.curve();ws.oversample='2x';f.type='lowpass';f.frequency.value=3800;n.connect(pre);pre.connect(ws);ws.connect(f);n=f}
+  n.connect(g);g.connect(dest||this.out);s.start(t,o.soft?.012:0);s.stop(t+dur+.5)},
+ // slide into the note and whole-tone bend, applied to every pitch parameter of a voice
+ glide(ps,t,dur,o){ps.forEach(([p,f])=>{p.setValueAtTime(f,t);if(o.slide){p.setValueAtTime(f*o.slide,t);p.exponentialRampToValueAtTime(f,t+.09)}if(o.bend){p.setValueAtTime(f,t+dur*.25);p.exponentialRampToValueAtTime(f*1.1225,t+dur*.55)}})},
+ flute(m,t,dur,peak,o){const c=this.ctx,f=mf(m),o1=c.createOscillator(),o2=c.createOscillator(),g2=c.createGain(),g=c.createGain(),lfo=c.createOscillator(),lg=c.createGain(),fl=c.createBiquadFilter(),end=t+dur;
+  o1.type='triangle';g2.gain.value=.3;this.glide([[o1.frequency,f],[o2.frequency,f*2]],t,dur,o);
+  lfo.frequency.value=5.2;lg.gain.setValueAtTime(0,t);lg.gain.linearRampToValueAtTime(9,t+.3);lfo.connect(lg);lg.connect(o1.detune);lg.connect(o2.detune);
+  fl.type='lowpass';fl.frequency.value=2400;g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(peak*.36,t+(o.soft?.02:.05));g.gain.setTargetAtTime(0,end,.05);
+  o1.connect(fl);o2.connect(g2);g2.connect(fl);fl.connect(g);g.connect(this.bus.mel);[o1,o2,lfo].forEach(x=>{x.start(t);x.stop(end+.4)})},
+ // two-operator FM electric piano with a short bright tine on the attack
+ epiano(m,t,dur,peak,o){const c=this.ctx,f=mf(m),car=c.createOscillator(),mod=c.createOscillator(),mg=c.createGain(),tine=c.createOscillator(),tg=c.createGain(),g=c.createGain(),end=t+dur;
+  this.glide([[car.frequency,f],[mod.frequency,f],[tine.frequency,f*4]],t,dur,o);
+  mg.gain.setValueAtTime(f*1.6,t);mg.gain.exponentialRampToValueAtTime(f*.25,t+.5);mod.connect(mg);mg.connect(car.frequency);
+  tg.gain.setValueAtTime(.3,t);tg.gain.exponentialRampToValueAtTime(.0001,t+.12);tine.connect(tg);tg.connect(g);
+  g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(peak*.45,t+.006);g.gain.setTargetAtTime(peak*.13,t+.006,.6);g.gain.setTargetAtTime(0,end,.08);
+  car.connect(g);g.connect(this.bus.mel);[car,mod,tine].forEach(x=>{x.start(t);x.stop(end+.6)})},
+ // one melody note in the selected melody sound
+ mel(m,t,dur,peak,o={}){const M=this.bus.mel,sn=SQ.msound;
+  if(sn==='flute')this.flute(m,t,dur,peak,o);else if(sn==='epiano')this.epiano(m,t,dur,peak,o);
+  else this.gtr(m,t,dur,sn==='dist'?peak*.26:sn==='mute'?peak*1.8:peak,M,sn==='mute'?{...o,mute:1}:sn==='clean'?{...o,br:1}:sn==='dist'?{...o,br:1,dist:1}:o)},
+ chord(ms,t,d){ms.forEach((m,i)=>this.gtr(m,t+i*.018,d,.24,this.bus.chords))},
+ pluck(m){this.resume();this.gtr(m,this.ctx.currentTime,1.8,.7)}
+};
+
+/* ---------- FRETBOARD ---------- */
+const tuning=()=>TUN[FB.tun].map(m=>m+FB.capo);   // open strings as they sound with the capo on
+const FB={frets:17,tun:'standard',root:'A',scale:'minor_pentatonic',box:0,mode:'notes',capo:0,left:false,arp:'',chord:null,
+ nf(){return this.frets-this.capo},
+ flat(){return useFlat(flatKey(ci(this.root)-SC[this.scale][2]))},
+ inBox(f,intervals){if(!this.box)return true;const low=tuning()[5]%12,d=intervals[(this.box-1)%intervals.length],start=((ci(this.root)+d-low)%12+12)%12;return ((f-start)%12+12)%12<=4},
+ // CAGED: fret window of the chosen shape around the chord root on the 6th (E, G), 5th (A, C) or 4th (D) string
+ cwin(){const sh=this.arp;if(sh.length!==1)return null;const up='EAD'.includes(sh),f=((ci(this.chord.r)-tuning()[{E:5,G:5,A:4,C:4,D:3}[sh]])%12+12)%12;let lo=up?f:f-3;if(lo<0)lo+=12;return x=>[-12,0,12].some(o=>x>=lo+o&&x<=lo+3+o)},
+ render(){
+  const iv=SC[this.scale][1],ri=ci(this.root),fl=this.flat(),pcs=iv.map(i=>(ri+i)%12),nf=this.nf(),rev=this.left?' flex-row-reverse':'';
+  const cpc=this.chord&&!QZ.on?CH[this.chord.t][1].map(i=>(ci(this.chord.r)+i)%12):null,win=cpc?this.cwin():null;
+  $('snotes').textContent=pcs.map(p=>nm(p,fl)).join(', ');$('sform').textContent=iv.map(i=>IV[i]).join(' ');
+  const inl=[3,5,7,9,15,17,19,21];
+  let h=`<div class="py-3${this.left?' lh':''}"><div class="flex${rev} text-[11px] font-mono font-bold text-slate-400 pb-1 border-b border-stone-800"><div class="w-14 text-center">${this.capo?'K'+this.capo:0}</div>`;
+  for(let f=1;f<=nf;f++)h+=`<div class="flex-1 text-center">${f}</div>`;
+  h+='</div>';
+  tuning().forEach((open,s)=>{
+   h+=`<div data-row="${s}" class="relative flex${rev} items-center h-11 border-b border-stone-800/80"><div class="absolute left-0 right-0 pointer-events-none bg-slate-300/80" style="height:${(1.5+s*.6).toFixed(1)}px;top:50%"></div>`;
+   for(let f=0;f<=nf;f++){
+    const m=open+f,pc=m%12,nt=nm(pc,fl),d=((pc-ri)%12+12)%12,on=pcs.includes(pc),af=f+this.capo,isCh=cpc&&cpc.includes(pc)&&(!win||win(f));
+    h+=`<div class="${f===0?'w-14 nut':'flex-1 fw'} relative flex items-center justify-center h-full">`;
+    if(f&&((s===2&&inl.includes(af))||(af===12&&(s===1||s===3))))h+='<span class="dot"></span>';
+    let cls=on?(d===0?'bg-amber-500 text-slate-950 border-amber-300 rg font-black':(d===3||d===4)?'bg-emerald-500 text-slate-950 border-emerald-300 font-bold':d===7?'bg-cyan-500 text-slate-950 border-cyan-300 font-bold':'bg-slate-600 text-white border-slate-400 font-bold'):'bg-s9/60 text-slate-400 border-stone-700 opacity-25 hover:opacity-90';
+    if(on&&!this.inBox(f,iv)&&!isCh)cls+=' opacity-15';
+    if(isCh)cls=(on?cls:'bg-s7 text-white border-white font-bold')+' ring-2 ring-white';
+    let txt=this.mode==='notes'?nt:this.mode==='int'?IV[d]:'';
+    let sz=this.mode==='dots'?(d===0?'w-4 h-4':'w-3 h-3'):(d===0?'w-7 h-7':'w-6 h-6');
+    if(QZ.on){[cls,txt]=QZ.look(s,f,m);sz='w-6 h-6'}
+    h+=`<button class="nb z-10 rounded-full border text-[10px] flex items-center justify-center ${sz} ${cls}" data-m="${m}" data-s="${s}" data-f="${f}"${QZ.on?'':` title="${nt}${Math.floor(m/12)-1} (${IV[d]})"`}>${txt}</button></div>`;
+   }
+   h+='</div>';
+  });
+  $('fb').innerHTML=h+'</div>';
+ }};
+$('fb').addEventListener('click',e=>{const b=e.target.closest('.nb');if(!b)return;A.pluck(+b.dataset.m);if(QZ.on)QZ.click(+b.dataset.s,+b.dataset.f,+b.dataset.m);else if(ED.on){ED.put(+b.dataset.s,+b.dataset.f);ED.move(1,0)}});
+const setScale=(r,s)=>{FB.root=r;FB.scale=s;$('root').value=r;$('scale').value=s;FB.render()};
+
+/* ---------- SEQUENCER (look-ahead scheduler on the audio clock) ---------- */
+// prog is a list of bars; a bar holds one chord, or two with the second starting at splitS()
+const SQ={playing:false,metOnly:false,msound:'ac',bpm:100,groove:'rock',key:{r:'C',m:'maj'},secs:[{n:'A',p:preBars(PRE.pop),m:null,k:null}],cs:0,shown:0,order:[0],oi:0,songMode:false,step:0,bar:0,next:0,timer:null,sel:0,cur:-1,curCh:'',
+ flat(){return useFlat(flatKey(ci(this.key.r)+(this.key.m==='min'?3:0)))},
+ toggle(met){const same=this.playing&&this.metOnly===met;if(this.playing)this.stop();if(!same){this.metOnly=met;this.start()}},
+ // the bars, melody and melody keys in use are those of the current section
+ get prog(){return this.secs[this.cs].p},set prog(v){this.secs[this.cs].p=v},get mel(){return this.secs[this.cs].m},set mel(v){this.secs[this.cs].m=v},get melKey(){return this.secs[this.cs].k},set melKey(v){this.secs[this.cs].k=v},
+ start(){A.resume();this.playing=true;this.step=0;if(this.songMode&&!this.metOnly){this.oi=0;this.cs=this.order[0];if(this.shown!==this.cs)showSec()}this.bar=loopRange()[0];this.laps=0;this.cur=-1;this.curCh='';this.next=A.ctx.currentTime+.08;
+  if($('cnt').checked&&!this.metOnly){const bs=bstep(),nb=S()/bs,d=bs*sdur();for(let i=0;i<nb;i++)A.click(this.next+i*d,i?0:2);this.next+=nb*d}
+  this.timer=setInterval(()=>this.pump(),25);this.btns();$('nowplaying').classList.remove('hidden');this.drawBars()},
+ stop(){this.playing=false;clearInterval(this.timer);this.btns();$('nowplaying').classList.add('hidden');hlTab(-1);beatOn(-1);if(this.shown!==this.cs)showSec();this.drawBars()},
+ btns(){const p=this.playing&&!this.metOnly,m=this.playing&&this.metOnly;
+  $('play').textContent=L(p?'■ Zastaviť':'▶ Spustiť sprievod');$('play').className='px-4 py-2 rounded-xl font-semibold text-slate-950 '+(p?'bg-rose-500':'bg-emerald-500');
+  $('met').textContent=(m?'■ ':'')+L('Metronóm');$('met').className='px-3 py-2 rounded-xl font-semibold text-sm border '+(m?'bg-rose-500 border-rose-400 text-slate-950':'bg-s7 border-s6')},
+ // one pass through the progression (or the loop) finished: speed up if the practice option asks for it
+ lap(){this.laps++;if(!$('spon').checked)return;const n=(id,lo,hi,d)=>Math.max(lo,Math.min(hi,parseInt($(id).value)||d)),mx=n('spmax',40,240,160);
+  if(this.laps%n('spev',1,16,2)===0&&this.bpm<mx){this.bpm=Math.min(mx,this.bpm+n('spinc',1,20,2));$('bpm').value=this.bpm;toast('Tempo: '+this.bpm+' BPM')}},
+ pump(){
+  while(this.next<A.ctx.currentTime+.12){
+   const bi=this.bar,st=this.step,sec=this.cs,sd=sdur(),bs=bstep(),sp=splitS(),t=this.next+(GR[this.groove].sw&&st%4===2?sd*2/3:0);
+   this.play(st,t,bi);
+   setTimeout(()=>{if(!this.playing)return;
+    if(st%bs===0)beatOn(st/bs);
+    if(this.metOnly){if(st%bs===0)$('nowplaying').textContent=`${L('Metronóm')} ${meter()} · ${L('doba')} ${st/bs+1}`;return}
+    if(sec!==this.cs)return;if(this.shown!==sec)showSec();   // the section changed: stale callbacks stop, the first new one switches the view
+    const bar=this.prog[bi];if(!bar)return;
+    const two=bar.length>1,c=bar[two&&st>=sp?1:0];this.cur=bi;this.curCh=lab(c);
+    $('nowplaying').textContent=`${this.secs.length>1?this.secs[sec].n+' · ':''}${dl(c)} · ${L('takt')} ${bi+1}/${this.prog.length} · ${L('doba')} ${Math.floor(st/bs)+1}`;
+    if(st===0||(two&&st===sp)){this.drawBars();this.suggest(c);hlTab(bi)}
+    if(st%2===0){const e=this.mel&&this.mel[bi]&&this.mel[bi][st/2];if(e)(e.tri?e.tri.forEach((n,i)=>setTimeout(()=>flash(n),i*sd*4000/3)):flash(e))}
+   },Math.max(0,(t-A.ctx.currentTime)*1000));
+   this.next+=sd;this.step++;
+   if(this.step>=S()){this.step=0;const[a,b]=loopRange();let nb=this.bar+1;
+    if(nb>b||nb>=this.prog.length){if(this.songMode&&!this.metOnly){this.oi=(this.oi+1)%this.order.length;if(!this.oi)this.lap();this.cs=this.order[this.oi];nb=0}else{nb=a;this.lap()}}
+    this.bar=nb}
+  }},
+ play(st,t,bi){
+  const G=GR[this.groove],g=this.groove,bs=bstep(),b=st/bs|0,sub=st%bs,six=G.m==='6/8';
+  if(sub===0&&(this.metOnly||!MIX.click.m))A.click(t,b===0?2:six&&b===3?1:0,this.metOnly?A.out:A.bus.click);
+  if(this.metOnly)return;
+  const bar=this.prog[bi];if(!bar)return;
+  const n=S(),sp=splitS(),sd=sdur(),two=bar.length>1,c=bar[two&&st>=sp?1:0],r=ci(c.r),iv=CH[c.t][1],rf=mf(r+36),f5=mf(r+43),ms=iv.map(i=>r+48+i).sort((x,y)=>x-y);
+  const strum=d=>A.chord(ms,t,G.sh?sd*1.5:d*sd*.95),hi=G.h.indexOf(st);
+  if(hi>=0){let e=hi+1<G.h.length?G.h[hi+1]:n;if(two&&st<sp)e=Math.min(e,sp);strum(e-st)}
+  else if(two&&st===sp&&!G.h.some(x=>x>=sp)&&!six)strum(n-sp);   // make sure the second chord of the bar is heard
+  if(this.mel&&st%2===0){const e=this.mel[bi]&&this.mel[bi][st/2];if(e)this.pm(e,t,this.mel[bi][st/2-1])}
+  if(g==='rock'){if(sub===0){b%2?A.snare(t):A.kick(t);A.bass(rf,t,.28)}else if(sub===2&&b===3)A.bass(f5,t,.22);if(sub%2===0)A.hat(t)}
+  else if(g==='funk'){if([0,6,10].includes(st))A.kick(t);if(st===4||st===12)A.snare(t);A.hat(t,st===14);if(st===0||st===6)A.bass(rf,t,.22);if(st===10||st===12)A.bass(f5,t,.18)}
+  else if(g==='jazz'){if(sub===0){A.hat(t);if(b===0)A.kick(t);if(b%2)A.snare(t,.4);const o=[0,iv[1],iv[2],iv[iv.length>3?3:2]];A.bass(mf(r+36+o[b]),t,.35)}if(sub===2&&b%2)A.hat(t,0,.2)}
+  else if(g==='shuffle'){if(sub===0){b%2?A.snare(t):A.kick(t);A.hat(t);A.bass(rf,t,.3)}if(sub===2){A.hat(t,0,.18);A.bass(b%2?f5:rf,t,.16)}}
+  else if(g==='bossa'){if(sub%2===0)A.hat(t,0,.16);if([0,6,8,14].includes(st))A.kick(t);if([0,3,6,10,13].includes(st))A.rim(t);if(st===0||st===14)A.bass(rf,t,st?.2:.5);if(st===6||st===8)A.bass(f5,t,st===6?.2:.5)}
+  else if(g==='reggae'){if(sub%2===0)A.hat(t,0,.2);if(st===8){A.kick(t);A.rim(t)}if(st===0||st===8)A.bass(rf,t,.4);if(st===6)A.bass(mf(r+36+iv[1]),t,.2);if(st===10)A.bass(f5,t,.3)}
+  else if(g==='waltz'){if(st===0){A.kick(t);A.bass(bi%2?f5:rf,t,.6)}if(st===4||st===8){A.hat(t);A.snare(t,.18)}}
+  else if(g==='b68'){if(sub===0){A.hat(t,0,b%3?.15:.28);if(b===0){A.kick(t);A.bass(rf,t,.9)}if(b===3){A.snare(t,.5);A.bass(f5,t,.5)}A.gtr(ms[[0,1,2,3,2,1][b]%ms.length],t,sd*5,.34,A.bus.chords)}}
+  else{if(sub===0&&b===0)A.kick(t);if(sub===0&&b===2)A.snare(t);if(sub%2===0)A.hat(t);if(sub===0&&b%2===0)A.bass(rf,t,.5)}
+ },
+ pm(e,t,pv){const e8=sdur()*2;
+  if(e.tri){const d=e8*2/3;e.tri.forEach((n,i)=>A.mel(n.m,t+i*d,d*1.5,.5));return}
+  const soft=e.a==='h'||e.a==='p',sl=e.a==='/'||e.a==='\\';
+  A.mel(e.m,t,Math.max(.3,(e.len||1)*e8*1.8),soft?.36:.55,{soft,bend:e.a==='b',slide:sl?(pv&&pv.m?mf(pv.m)/mf(e.m):e.a==='/'?.8:1.25):0})},
+ suggest(c){
+  const r=c.r,main=mainScale(c);let alts=[];
+  if(main==='dorian')alts=['minor_pentatonic','aeolian'];else if(main==='mixolydian')alts=['blues','major_pentatonic'];else if(main==='ionian')alts=['major_pentatonic','lydian'];
+  const l=s=>`<button class="underline text-emerald-300 mr-2" data-r="${r}" data-s="${s}">${nm(ci(r),useFlat(flatKey(ci(r)-SC[s][2])))} ${L(SC[s][0])}</button>`;
+  $('sugg').innerHTML=`${L('K akordu')} <b class="text-amber-400">${dl(c)}</b> ${L('sedí:')} ${l(main)}${alts.map(l).join('')}`;
+  FB.chord=FB.arp?c:null;
+  if(this.playing&&$('autosync').checked)setScale(r,main);else if(FB.arp)FB.render();
+ },
+ drawBars(){
+  $('bars').innerHTML='';const lr=$('lpon').checked?loopRange():null;
+  this.prog.forEach((bar,i)=>{const d=document.createElement('button');const cur=this.playing&&!this.metOnly&&i===this.cur;
+   d.className='p-2 rounded-xl border text-center '+(cur?'bg-amber-500/20 border-amber-400':i===this.sel?'bg-s7 border-emerald-400':'bg-s9 border-s7')+(lr&&i>=lr[0]&&i<=lr[1]?' ring-1 ring-cyan-400/70':'');
+   d.innerHTML=`<div class="text-[10px] text-slate-400">${L('Takt')} ${i+1}</div><div class="${bar.length>1?'text-sm':'text-lg'} font-extrabold text-amber-400">${bar.map(dl).join(' · ')}</div><div class="text-[10px] font-mono text-cyan-300/80">${bar.map(degOf).join(' · ')}</div>`;
+   d.onclick=()=>{this.sel=i;edSync();this.drawBars()};$('bars').appendChild(d)});
+  if(document.activeElement!==$('degs'))$('degs').value=this.prog.map(b=>b.map(degOf).join(',')).join(' ');
+  drawDias();
+ }};
+const loopRange=()=>{const n=SQ.prog.length;if(!$('lpon').checked||SQ.songMode)return[0,n-1];const a=Math.max(0,Math.min(n-1,(parseInt($('lpa').value)||1)-1));return[a,Math.max(a,Math.min(n-1,(parseInt($('lpb').value)||n)-1))]};
+const edSync=()=>{const b=SQ.prog[SQ.sel],c2=b[1]||b[0];$('ebar').textContent=SQ.sel+1;$('eroot').value=b[0].r;$('etype').value=b[0].t;$('e2on').checked=b.length>1;$('eroot2').value=c2.r;$('etype2').value=c2.t;$('eroot2').disabled=$('etype2').disabled=b.length<2};
+$('sugg').addEventListener('click',e=>{const b=e.target.closest('button');if(b){setScale(b.dataset.r,b.dataset.s);toast(L('Hmatník: ')+b.textContent)}});
+const drawBeats=()=>{const six=meter()==='6/8',n=S()/bstep();$('beats').innerHTML=Array.from({length:n},(_,i)=>`<span class="bd${i===0||(six&&i===3)?' ac':''}"></span>`).join('')};
+const beatOn=i=>[...$('beats').children].forEach((d,j)=>d.classList.toggle('on',j===i));
+
+/* ---------- DEGREES (roman numerals relative to SQ.key) ---------- */
+const ROM=['I','II','III','IV','V','VI','VII'];
+const DMAJ=['I','bII','II','bIII','III','IV','#IV','V','bVI','VI','bVII','VII'],DMIN=['I','bII','II','III','#III','IV','#IV','V','VI','#VI','VII','#VII'];
+const DSUF={maj:'',m:'','7':'7',maj7:'maj7',m7:'7',m7b5:'ø',dim7:'°',sus4:'sus4','9':'9',m9:'9','13':'13','7alt':'7alt'};
+function degOf(c){const d=(SQ.key.m==='min'?DMIN:DMAJ)[((ci(c.r)-ci(SQ.key.r))%12+12)%12];return(MINOR.includes(c.t)?d.toLowerCase():d)+DSUF[c.t]}
+function parseDeg(str){const k=ci(SQ.key.r),sc=SQ.key.m==='min'?[0,2,3,5,7,8,10]:[0,2,4,5,7,9,11];
+ const UP={'':'maj','7':'7',maj7:'maj7','9':'9','13':'13',sus4:'sus4','7alt':'7alt',alt:'7alt',m:'m',m7:'m7',m9:'m9',dim:'dim7',dim7:'dim7',m7b5:'m7b5'},LO={'':'m','7':'m7','9':'m9',m:'m',m7:'m7',m9:'m9',dim:'dim7',dim7:'dim7',m7b5:'m7b5','7b5':'m7b5'};
+ return str.trim().split(/[\s|]+/).filter(Boolean).map(tok=>tok.split(',').filter(Boolean).slice(0,2).map(x=>{
+  const m=x.match(/^([b#]?)(VII|VI|IV|V|III|II|I|vii|vi|iv|v|iii|ii|i)(.*)$/);if(!m)throw x;
+  const up=m[2]===m[2].toUpperCase(),q=m[3].replace('°','dim').replace('ø','m7b5'),T=up?UP:LO;if(!(q in T))throw x;
+  return mk(cn(k+sc[ROM.indexOf(m[2].toUpperCase())]+(m[1]==='b'?-1:m[1]==='#'?1:0)),T[q])}))}
+
+/* ---------- MELODY ---------- */
+const mainScale=c=>['m','m7','m9'].includes(c.t)?'dorian':c.t==='7alt'?'altered':['7','9','13'].includes(c.t)?'mixolydian':c.t==='m7b5'?'locrian':c.t==='dim7'?'diminished':'ionian';
+const flash=e=>{const b=document.querySelector(`.nb[data-m="${e.m}"][data-s="${e.s}"]`);if(b){b.classList.add('mel');setTimeout(()=>b.classList.remove('mel'),220)}};
+const mkey=bar=>barLab(bar)+meter();
+function genMel(force){
+ const st=$('mstyle').value,old=SQ.mel,ok=SQ.melKey,keep=$('lock').checked&&!force&&old&&ok,E=S()/2,sE=splitS()/2,six=meter()==='6/8';let hand=7,prev=69,motif=null;
+ const lastOf=ev=>{const l=ev.filter(Boolean).pop();if(l)prev=l.tri?l.tri[2].m:l.m};
+ const fing=(m,bx)=>{let b=null,bs=99;tuning().forEach((o,s)=>{const f=m-o;if(f<0||f>FB.nf())return;const q=Math.abs(f-hand)+(f===0?1.5:0)+(bx&&FB.box&&!FB.inBox(f,SC[FB.scale][1])?4:0);if(q<bs){bs=q;b={m,s,f}}});return b};
+ SQ.mel=SQ.prog.map((bar,bi)=>{
+  if(keep&&ok[bi]===mkey(bar)&&old[bi]&&old[bi].length===E){lastOf(old[bi]);return old[bi]}
+  // per chord: the scale ladder across the playable range and a nearest-note lookup (optionally chord tones only)
+  const cx=bar.map(c=>{const minor=['m','m7','m9','7','9','13','7alt'].includes(c.t),r=ci(c.r);
+   const sk=st==='blues'?'blues':st==='pent'&&!['m7b5','dim7'].includes(c.t)?(minor?'minor_pentatonic':'major_pentatonic'):mainScale(c);
+   const pool=SC[sk][1].map(i=>(r+i)%12),ct=CH[c.t][1].map(i=>(r+i)%12),lad=[];
+   for(let m=55;m<=81;m++)if(pool.includes(m%12))lad.push(m);
+   return{lad,near:(v,only)=>{let b=0,bd=99;lad.forEach((m,i)=>{const d=Math.abs(m-v);if(d<bd&&(!only||ct.includes(m%12))){bd=d;b=i}});return b}}});
+  const at=k=>cx[bar.length>1&&k>=sE?1:0],strong=k=>six?k%3===0:k%2===0,pick=(x,i)=>x.lad[Math.max(0,Math.min(x.lad.length-1,i))];
+  const m0=pick(cx[0],cx[0].near(prev,1));let ms;
+  if(st==='lyric'&&bi%2&&motif&&motif.length===E)ms=motif.map((d,k)=>{if(d===null)return null;const x=at(k);return pick(x,x.near(m0+d,strong(k)))});
+  else{ms=[m0];let cm=m0;for(let k=1;k<E;k++){const x=at(k),i=x.near(cm,0);
+    if(!strong(k)){if(Math.random()<.15){ms.push(null);continue}cm=pick(x,i+[-2,-1,1,2][Math.random()*4|0])}
+    else cm=pick(x,x.near(pick(x,i+[-2,-1,0,1,2][Math.random()*5|0]),1));
+    ms.push(cm)}
+   if(bi%2===0)motif=ms.map(m=>m===null?null:m-m0)}
+  const ev=ms.map(m=>{if(m===null)return null;const best=fing(m,1);if(best&&best.f>0)hand=best.f;return best});
+  if(!six)for(let k=2;k<E;k+=2)if(ev[k]&&Math.random()<.2){const x=at(k),i=x.lad.indexOf(ev[k].m),dr=Math.random()<.5?1:-1,ns=[ev[k],fing(pick(x,i+dr)),fing(pick(x,i+2*dr))];if(ns.every(Boolean)){ev[k]={tri:ns};ev[k+1]=null}}
+  for(let k=0;k<E;k+=2)if(ev[k]&&!ev[k].tri&&(ev[k+1]===null||(ev[k+1]&&Math.random()<.25))){ev[k+1]=null;ev[k].len=2}
+  for(let k=1;k<E;k++){const e=ev[k],q=ev[k-1];if(e&&q&&!e.tri&&!q.tri&&e.s===q.s&&e.f>0&&q.f>0&&Math.random()<.6){const d=e.f-q.f;if(d>0&&d<=2)e.a='h';else if(d<0&&d>=-2)e.a='p';else if(Math.abs(d)>=3)e.a=d>0?'/':'\\'}}
+  if(st==='blues')ev.forEach(e=>{if(e&&!e.tri&&e.len&&e.f>0&&!e.a&&Math.random()<.4)e.a='b'});
+  lastOf(ev);return ev});
+ SQ.melKey=SQ.prog.map(mkey);drawTab()}
+const tl=s=>{const ns=tuning().map(m=>nm(m,SQ.flat())),w=Math.max(...ns.map(n=>n.length));return(s?ns[s]:ns[s].toLowerCase()).padEnd(w)};
+// one string of one bar as cells: k = first eighth slot, w = slots covered (a triplet covers two), x = its text
+function rowCells(b,s){const m=SQ.mel[b],o=[];for(let k=0;k<m.length;k++){const e=m[k];if(e&&e.tri){o.push({k,w:2,x:e.tri.map(n=>n.s===s?String(n.f).padStart(2,'-'):'--').join('')});k++;continue}
+ let x='---';if(e&&e.s===s){const n=m[k+1];x=String(e.f).padStart(2,'-')+(n&&!n.tri&&n.s===s&&n.a&&n.a!=='b'?n.a:e.a==='b'?'b':'-')}o.push({k,w:1,x})}return o}
+const rowStr=(b,s)=>rowCells(b,s).map(c=>c.x).join('');
+function drawTab(){
+ $('tab').innerHTML=SQ.prog.map((bar,b)=>{let o=bar.map(dl).join('  ')+'\n';for(let s=0;s<6;s++)o+=tl(s)+'|'+rowCells(b,s).map(c=>`<span data-k="${c.k}" data-s="${s}"${ED.on&&ED.b===b&&ED.s===s&&(ED.k===c.k||(c.w===2&&ED.k===c.k+1))?' class="sel"':''}>${c.x}</span>`).join('')+'|\n';return `<pre data-b="${b}" class="tb text-[11px] leading-4 font-mono text-slate-200 p-2 rounded-lg border border-s7">${o}</pre>`}).join('');
+ if(SQ.playing&&!SQ.metOnly)hlTab(SQ.cur);if(ED.on)ED.ui()}
+// runs fn with every section selected in turn (SQ.prog and SQ.mel then refer to that section)
+const forSecs=fn=>{const c=SQ.cs;try{SQ.secs.forEach((_,i)=>{SQ.cs=i;fn()})}finally{SQ.cs=c}};
+const genAll=force=>{forSecs(()=>genMel(force));drawTab()};
+
+/* ---------- MELODY EDITOR (cursor = bar, eighth slot, string) ---------- */
+const ARTS=['h','p','/','\\','b'];
+const ED={on:false,b:0,k:0,s:0,ld:null,lt:0,lp:'',
+ toggle(){this.on=!this.on;$('edbar').classList.toggle('hidden',!this.on);$('tab').classList.toggle('ed',this.on);$('edbtn').className='px-3 py-1 rounded border '+(this.on?'bg-amber-500 text-slate-950 border-amber-400 font-bold':'bg-s7 border-s6');if(this.on)$('lock').checked=true;drawTab()},
+ fix(){this.b=Math.min(this.b,SQ.mel.length-1);this.k=Math.min(this.k,SQ.mel[this.b].length-1)},
+ // slot that owns the cursor: the first slot of a triplet when the cursor sits on its second half
+ head(){const bar=SQ.mel[this.b];return this.k>0&&bar[this.k-1]&&bar[this.k-1].tri?this.k-1:this.k},
+ ui(){this.fix();const e=SQ.mel[this.b][this.head()],one=e&&!e.tri;$('edpos').textContent=`${L('Takt')} ${this.b+1} · ${L('osmina')} ${this.k+1} · ${L('struna')} ${this.s+1}`;
+  $('edart').value=one&&e.a||'';$('edlen').checked=!!(one&&e.len===2);$('edart').disabled=$('edlen').disabled=!one},
+ put(s,f){this.fix();if(f<0||f>FB.nf())return;const bar=SQ.mel[this.b],h=this.head(),m=tuning()[s]+f;
+  if(h!==this.k)bar[h]=null;const pv=bar[this.k-1];if(pv&&pv.len===2)delete pv.len;
+  bar[this.k]={m,s,f};this.s=s;A.resume();A.mel(m,A.ctx.currentTime,.5,.55);drawTab();touch()},
+ del(){this.fix();const bar=SQ.mel[this.b];bar[this.head()]=null;bar[this.k]=null;drawTab();touch()},
+ move(dk,ds){this.fix();this.s=Math.max(0,Math.min(5,this.s+ds));let k=this.k+dk,b=this.b;const n=SQ.mel.length;if(k<0){b=(b+n-1)%n;k=SQ.mel[b].length-1}else if(k>=SQ.mel[b].length){b=(b+1)%n;k=0}this.b=b;this.k=k;drawTab()},
+ // digits type a fret (two digits within a moment make 10 and up), arrows move, Delete clears; true when the key was used
+ key(e){const k=e.key;if(/^\d$/.test(k)){const now=Date.now(),pos=this.b+':'+this.k+':'+this.s;let f=+k;if(this.ld!==null&&now-this.lt<900&&this.lp===pos&&this.ld*10+f<=FB.nf()){f+=this.ld*10;this.ld=null}else this.ld=f;this.lt=now;this.lp=pos;this.put(this.s,f);return true}
+  const mv={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]}[k];if(mv){this.move(...mv);return true}
+  if(k==='Delete'||k==='Backspace'){this.del();return true}return false}};
+$('edbtn').onclick=()=>ED.toggle();$('eddel').onclick=()=>ED.del();
+$('tab').onclick=e=>{const sp=ED.on&&e.target.closest('span[data-k]');if(!sp)return;ED.b=+sp.closest('pre').dataset.b;ED.k=+sp.dataset.k;ED.s=+sp.dataset.s;drawTab()};
+$('edart').onchange=e=>{const n=SQ.mel[ED.b][ED.k];if(!n||n.tri)return;if(e.target.value)n.a=e.target.value;else delete n.a;drawTab()};
+$('edlen').onchange=e=>{const bar=SQ.mel[ED.b],n=bar[ED.k];if(!n||n.tri)return;if(e.target.checked){n.len=2;if(ED.k+1<bar.length)bar[ED.k+1]=null}else delete n.len;drawTab()};
+
+/* ---------- CHORD DIAGRAMS ---------- */
+const VC={};
+function voicing(c){const key=lab(c)+FB.tun+FB.capo;if(key in VC)return VC[key];const T=tuning(),iv=CH[c.t][1],pc=i=>(ci(c.r)+i)%12,tn=iv.map(pc),req=iv.filter(i=>!(iv.length>3&&i===7)&&!(c.t==='13'&&i===14)&&!(c.t==='7alt'&&i===8)).map(pc),loose=iv.filter(i=>[0,3,4,5,10,11].includes(i)).map(pc);let best=null,bs=1e9;
+ for(const rq of [req,loose]){if(best)break;for(let w=0;w<=9;w++){const hi=w+(w?3:4),cur=[];
+  const rec=(i,on)=>{if(i<0){const sd=cur.filter(f=>f>=0);if(sd.length<4)return;let lo=5;while(cur[lo]<0)lo--;if((T[lo]+cur[lo])%12!==tn[0])return;
+    const pcs=cur.map((f,j)=>f<0?-1:(T[j]+f)%12);if(!rq.every(r=>pcs.includes(r)))return;
+    const fr=cur.filter(f=>f>0),mn=Math.min(...fr),nm=fr.filter(f=>f===mn).length,fg=fr.length-(nm>1?nm-1:0);if(fg>4)return;
+    const q=(fr.length?Math.max(...fr)-mn:0)*2+(6-sd.length)*1.5+w*.4-cur.filter(f=>f===0).length*.6;if(q<bs){bs=q;best=cur.slice()}return}
+   if(!on){cur[i]=-1;rec(i-1,false)}
+   for(let f=0;f<=hi;f++)if((f===0||f>=w)&&tn.includes((T[i]+f)%12)){cur[i]=f;rec(i-1,true)}};
+  rec(5,false)}}
+ return VC[key]=best}
+function dia(c){const v=voicing(c);if(!v)return'<div class="text-xs text-slate-500 p-4">'+L('bez tvaru')+'</div>';
+ const fr=v.filter(f=>f>0),base=fr.length&&Math.max(...fr)>4?Math.min(...fr):1;let g='';
+ for(let i=0;i<6;i++)g+=`<line x1="${12+i*10}" y1="18" x2="${12+i*10}" y2="78" stroke="#94a3b8"/>`;
+ for(let r=0;r<=4;r++)g+=`<line x1="12" y1="${18+r*15}" x2="62" y2="${18+r*15}" stroke="#94a3b8" stroke-width="${r===0&&base===1?3:1}"/>`;
+ v.forEach((f,i)=>{const x=12+(FB.left?i:5-i)*10;if(f<0)g+=`<text x="${x}" y="13" font-size="10" text-anchor="middle" fill="#94a3b8">x</text>`;else if(f===0)g+=`<circle cx="${x}" cy="9" r="3" fill="none" stroke="#94a3b8"/>`;else g+=`<circle cx="${x}" cy="${18+(f-base+.5)*15}" r="4.5" fill="#f59e0b"/>`});
+ if(base>1)g+=`<text x="66" y="29" font-size="9" fill="#94a3b8">${base}</text>`;
+ return `<svg viewBox="0 0 76 84" width="76" height="84">${g}</svg>`}
+function drawDias(){const seen=new Set();$('dias').innerHTML=SQ.prog.flat().map(c=>{const k=lab(c);if(seen.has(k))return'';seen.add(k);const on=SQ.playing&&!SQ.metOnly&&SQ.curCh===k;return `<div class="text-center p-1 rounded-lg border ${on?'border-amber-400 bg-amber-500/10':'border-s7'}"><div class="text-xs font-bold text-amber-400">${dl(c)}</div>${dia(c)}</div>`}).join('')}
+function hlTab(bar){document.querySelectorAll('.tb').forEach(e=>e.classList.toggle('on',+e.dataset.b===bar))}
+function tabText(){const w=S()/2*3,many=SQ.secs.length>1;let o='LubenoGuitar - '+L('tabulatúra')+' ('+$('mstyle').selectedOptions[0].text+', '+L(GR[SQ.groove].n)+', '+SQ.bpm+' BPM, '+L('1 stĺpec = osmina')+')\n';
+ if(many)o+=L('Poradie')+': '+SQ.order.map(i=>SQ.secs[i].n).join(' ')+'\n';o+='\n';
+ forSecs(()=>{if(many)o+='['+SQ.secs[SQ.cs].n+']\n';
+  for(let r=0;r<SQ.prog.length;r+=2){const bs=[r,r+1].filter(b=>b<SQ.prog.length);o+=' '.repeat(tl(0).length)+bs.map(b=>' '+SQ.prog[b].map(dl).join('  ').padEnd(w)).join('')+'\n';
+   for(let s=0;s<6;s++)o+=tl(s)+bs.map(b=>'|'+rowStr(b,s)).join('')+'|\n';o+='\n'}});return o}
+const saveBlob=(fn,blob)=>{const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=fn;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)};
+$('savetab').onclick=async()=>{const fn='lubenoguitar-tabulatura.txt';try{const d=window.claude&&await claude.use('downloads');if(d)return await d.save({filename:fn,data:tabText()});
+ saveBlob(fn,new Blob([tabText()],{type:'text/plain;charset=utf-8'}))}catch(e){if(!e||e.code!=='declined')toast(L('Uloženie zlyhalo'))}};
+// MIDI: one pass of the progression, rendered by running the sequencer with note recorders in place of the synth
+function midiBytes(){A.resume();const PPQ=480,n=S(),sd=sdur(),q=sd*4,tk=t=>Math.max(0,Math.round(t/q*PPQ)),f2m=f=>Math.round(69+12*Math.log2(f/440)),vel=v=>Math.max(1,Math.min(127,v|0));
+ const tr={mel:[],chords:[],bass:[],drums:[]},add=(k,m,t,d,v)=>tr[k].push([tk(t),1,m,vel(v)],[Math.max(tk(t)+1,tk(t+d)),0,m,0]);
+ const rec={kick:t=>add('drums',36,t,.1,110),snare:(t,p=.8)=>add('drums',38,t,.1,40+p*80),rim:t=>add('drums',37,t,.1,90),hat:(t,o,p=.3)=>add('drums',o?46:42,t,.1,40+p*200),click(){},
+  bass:(f,t,d)=>add('bass',f2m(f),t,d,100),chord:(ms,t,d)=>ms.forEach(m=>add('chords',m,t,d,70)),gtr:(m,t,d)=>add('chords',m,t,d,70),mel:(m,t,d)=>add('mel',m,t,d,105)};
+ const keep={},mo=SQ.metOnly;for(const k in rec){keep[k]=A[k];A[k]=rec[k]}SQ.metOnly=false;
+ const c0=SQ.cs;let off=0;   // the whole song in song mode, otherwise the section shown
+ try{(SQ.songMode?SQ.order:[c0]).forEach(si=>{SQ.cs=si;SQ.prog.forEach((bar,bi)=>{for(let st=0;st<n;st++)SQ.play(st,((off+bi)*n+st)*sd+(GR[SQ.groove].sw&&st%4===2?sd*2/3:0),bi)});off+=SQ.prog.length})}finally{SQ.cs=c0;Object.assign(A,keep);SQ.metOnly=mo}
+ const vlq=v=>{const b=[v&127];while(v>>=7)b.unshift(v&127|128);return b};
+ const chunk=(id,d)=>[...id].map(c=>c.charCodeAt(0)).concat([d.length>>>24&255,d.length>>>16&255,d.length>>>8&255,d.length&255],d);
+ const us=Math.round(q*1e6),ts={'4/4':[4,2],'3/4':[3,2],'6/8':[6,3]}[meter()];
+ const track=(ev,ch,prog,name)=>{ev.sort((a,b)=>a[0]-b[0]||a[1]-b[1]);const nb=[...name].map(c=>c.charCodeAt(0));let d=[0,255,3,nb.length,...nb],last=0;if(prog!=null)d.push(0,192|ch,prog);
+  ev.forEach(e=>{d.push(...vlq(e[0]-last),(e[1]?144:128)|ch,e[2],e[3]);last=e[0]});d.push(0,255,47,0);return chunk('MTrk',d)};
+ const tracks=[chunk('MTrk',[0,255,81,3,us>>16&255,us>>8&255,us&255,0,255,88,4,ts[0],ts[1],24,8,0,255,47,0]),track(tr.mel,0,{ac:25,mute:28,clean:27,dist:29,flute:73,epiano:4}[SQ.msound],'Melodia'),track(tr.chords,1,24,'Akordy'),track(tr.bass,2,33,'Basa'),track(tr.drums,9,null,'Bicie')];
+ return new Uint8Array(chunk('MThd',[0,1,0,tracks.length,PPQ>>8,PPQ&255]).concat(...tracks))}
+$('savemid').onclick=()=>{try{saveBlob('lubenoguitar.mid',new Blob([midiBytes()],{type:'audio/midi'}))}catch(e){toast(L('Uloženie zlyhalo'))}};
+
+/* ---------- QUIZ (uses the shared fretboard with labels hidden) ---------- */
+const INT=['malá sekunda','veľká sekunda','malá tercia','veľká tercia','čistá kvarta','tritonus','čistá kvinta','malá sexta','veľká sexta','malá septima','veľká septima','oktáva'];
+const QZ={on:false,asked:false,mode:'find',ok:0,bad:0,pc:0,found:new Set(),total:0,a:null,b:null,iv:0,done:false,
+ maxF(){return Math.min(12,FB.nf())},
+ pcName(pc){const a=nm(pc,false),b=nm(pc,true);return a===b?a:a+' / '+b},
+ text(){$('qtext').textContent=this.mode==='find'?(this.done?L('Výborne, všetky nájdené!'):`${L('Nájdi všetky tóny')} ${this.pcName(this.pc)} (${this.found.size}/${this.total})`):(this.done?`${L('Správne')}: ${L(INT[this.iv-1])}`:L('Aký interval je medzi oranžovým a bielym tónom?'));$('qok').textContent=this.ok;$('qbad').textContent=this.bad},
+ next(){this.asked=true;this.mode=$('qmode').value;this.done=false;clearTimeout(this.tm);const T=tuning(),mx=this.maxF();
+  if(this.mode==='find'){this.pc=Math.random()*12|0;this.found=new Set();this.total=0;T.forEach(o=>{for(let f=0;f<=mx;f++)if((o+f)%12===this.pc)this.total++});$('qans').innerHTML=''}
+  else{for(;;){const s=Math.random()*6|0,f=Math.random()*Math.min(9,mx+1)|0,iv=1+(Math.random()*12|0),m=T[s]+f+iv;let best=null;
+    T.forEach((o,s2)=>{const f2=m-o;if(f2>=0&&f2<=mx&&Math.abs(s2-s)<=2&&(!best||Math.abs(f2-f)<Math.abs(best.f-f)))best={s:s2,f:f2,m}});
+    if(best&&Math.abs(best.f-f)<=5){this.a={s,f,m:T[s]+f};this.b=best;this.iv=iv;break}}
+   const o=new Set([this.iv]);while(o.size<4)o.add(1+(Math.random()*12|0));
+   $('qans').innerHTML=[...o].sort(()=>Math.random()-.5).map(i=>`<button data-iv="${i}" class="px-3 py-1.5 rounded-lg bg-s7 border border-s6 text-sm font-semibold">${L(INT[i-1])}</button>`).join('');
+   A.resume();const t=A.ctx.currentTime;A.gtr(this.a.m,t,1.2,.6);A.gtr(this.b.m,t+.5,1.4,.6)}
+  this.text();FB.render()},
+ // class and label of one fretboard position while the quiz is on
+ look(s,f,m){const dim=['bg-s9/60 border-stone-800 opacity-30',''],hid=['bg-s7 border-stone-500 hover:border-white',''];
+  if(this.mode==='find')return f>this.maxF()?dim:this.found.has(s+':'+f)?['bg-emerald-500 text-slate-950 border-emerald-300 font-bold',nm(m,SQ.flat())]:hid;
+  return this.a&&s===this.a.s&&f===this.a.f?['bg-amber-500 text-slate-950 border-amber-300 font-black','1']:this.b&&s===this.b.s&&f===this.b.f?['bg-white text-slate-950 border-white font-black','?']:dim},
+ click(s,f,m){if(this.mode!=='find'||this.done||f>this.maxF()||this.found.has(s+':'+f))return;
+  if(m%12===this.pc){this.found.add(s+':'+f);if(this.found.size===this.total){this.ok++;this.done=true;this.tm=setTimeout(()=>this.on&&this.next(),1200)}}else this.bad++;
+  this.text();FB.render()},
+ answer(b){if(this.mode!=='int'||this.done)return;
+  if(+b.dataset.iv===this.iv){this.ok++;this.done=true;b.className+=' !bg-emerald-500 !text-slate-950';this.tm=setTimeout(()=>this.on&&this.next(),1200)}else{this.bad++;b.disabled=true;b.className+=' opacity-40 line-through'}
+  this.text()}};
+$('qnext').onclick=()=>QZ.next();$('qmode').onchange=()=>QZ.next();
+$('qans').onclick=e=>{const b=e.target.closest('button');if(b)QZ.answer(b)};
+
+/* ---------- TUNER (microphone, autocorrelation pitch detection) ---------- */
+const TN={on:false,msg:'Zahraj jednu strunu blízko mikrofónu.',stream:null,src:null,an:null,timer:null,buf:null,miss:0,
+ async start(){try{A.resume();this.stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
+   this.an=A.ctx.createAnalyser();this.an.fftSize=4096;this.buf=new Float32Array(4096);this.src=A.ctx.createMediaStreamSource(this.stream);this.src.connect(this.an);
+   this.on=true;this.timer=setInterval(()=>this.show(this.pitch()),90);this.ui('Zahraj jednu strunu blízko mikrofónu.')}
+  catch(e){this.ui('Mikrofón nie je dostupný. Povoľ ho v prehliadači a skús to znova.')}},
+ stop(){if(!this.on)return;this.on=false;clearInterval(this.timer);this.stream.getTracks().forEach(t=>t.stop());this.src.disconnect();this.miss=9;this.show(0);this.ui('Mikrofón je vypnutý.')},
+ ui(msg){if(msg)this.msg=msg;$('tunmsg').textContent=L(this.msg);$('tunbtn').textContent=L(this.on?'Vypnúť mikrofón':'Zapnúť mikrofón');$('tunbtn').className='px-4 py-2 rounded-xl font-semibold text-slate-950 '+(this.on?'bg-rose-500':'bg-emerald-500')},
+ // fundamental in Hz of the samples in b, or 0 when the signal is too quiet or unclear
+ detect(b,sr){const n=b.length;let e=0;for(let i=0;i<n;i++)e+=b[i]*b[i];if(Math.sqrt(e/n)<.01)return 0;
+  const mx=Math.min(n>>1,sr/60|0),w=n-mx-1,c=new Float32Array(mx+2);for(let l=0;l<=mx+1;l++){let s=0;for(let i=0;i<w;i++)s+=b[i]*b[i+l];c[l]=s}
+  let d=0;while(d<mx&&c[d]>c[d+1])d++;let top=0;for(let l=d;l<=mx;l++)if(c[l]>top)top=c[l];if(top<c[0]*.4)return 0;
+  let p=0;for(let l=Math.max(1,d);l<=mx;l++)if(c[l]>=top*.9&&c[l]>=c[l-1]&&c[l]>=c[l+1]){p=l;break}if(!p)return 0;
+  const a=(c[p-1]+c[p+1]-2*c[p])/2,bb=(c[p+1]-c[p-1])/2,f=sr/(a?p-bb/(2*a):p);return f>55&&f<1400?f:0},
+ pitch(){this.an.getFloatTimeDomainData(this.buf);return this.detect(this.buf,A.ctx.sampleRate)},
+ show(f){const nd=$('tunneedle');
+  if(!f){if(++this.miss>8){$('tunnote').textContent='–';$('tunnote').className='text-6xl font-extrabold text-slate-500';$('tuncents').textContent='';nd.style.left='50%';nd.className=nd.className.replace(/bg-\S+/,'bg-slate-500');this.mark(-1)}return}
+  this.miss=0;const m=69+12*Math.log2(f/440),near=Math.round(m),ct=Math.round((m-near)*100),ok=Math.abs(ct)<=5;
+  $('tunnote').textContent=nm(near,SQ.flat())+(Math.floor(near/12)-1);$('tunnote').className='text-6xl font-extrabold '+(ok?'text-emerald-400':'text-amber-400');
+  $('tuncents').textContent=ok?L('naladené'):ct<0?`${-ct} ${L('centov nízko – pritiahni')}`:`${ct} ${L('centov vysoko – povoľ')}`;
+  nd.style.left=(50+Math.max(-50,Math.min(50,ct)))+'%';nd.className=nd.className.replace(/bg-\S+/,ok?'bg-emerald-400':'bg-amber-400');this.mark(near)},
+ mark(m){[...$('tunstr').children].forEach(b=>b.classList.toggle('!border-emerald-400',+b.dataset.m===m))},
+ strings(){$('tunstr').innerHTML=TUN[FB.tun].slice().reverse().map(m=>`<button data-m="${m}" class="px-3 py-2 rounded-lg bg-s9 border-2 border-s6 font-bold text-amber-400">${nm(m,SQ.flat())}<span class="text-[10px] text-slate-400">${Math.floor(m/12)-1}</span></button>`).join('')}};
+$('tunbtn').onclick=()=>TN.on?TN.stop():TN.start();
+$('tunstr').onclick=e=>{const b=e.target.closest('button');if(b)A.pluck(+b.dataset.m)};
+
+/* ---------- STATE: autosave + named slots ---------- */
+const clampBpm=v=>Math.max(40,Math.min(240,parseInt(v)||100));
+const guessKey=p=>({r:p[0][0].r,m:['m','m7','m9'].includes(p[0][0].t)?'min':'maj'});
+const song=()=>({v:3,secs:SQ.secs.map(x=>({n:x.n,p:x.p,m:x.m})),cs:SQ.cs,ord:SQ.order,sm:SQ.songMode,b:SQ.bpm,g:SQ.groove,ky:SQ.key,s:$('mstyle').value,ms:SQ.msound,t:FB.tun,cp:FB.capo});
+const full=()=>({...song(),mix:MIX,o:OPT,fr:FB.root,fs:FB.scale,fx:FB.box,fm:FB.mode,cnt:$('cnt').checked,lock:$('lock').checked,as:$('autosync').checked,vol:$('vol').value,lh:FB.left,arp:FB.arp,pr:['lpa','lpb','spinc','spev','spmax'].map(id=>$(id).value).concat($('lpon').checked,$('spon').checked)});
+// melody events are rebuilt from string and fret, so loaded or shared data cannot carry anything but valid notes
+const normNote=(e,T)=>e&&Number.isInteger(e.s)&&Number.isInteger(e.f)&&e.s>=0&&e.s<6&&e.f>=0&&e.f<=FB.nf()?{m:T[e.s]+e.f,s:e.s,f:e.f}:null;
+const normEv=(e,T)=>{if(!e)return null;if(e.tri){const n3=Array.isArray(e.tri)&&e.tri.length===3?e.tri.map(n=>normNote(n,T)):[];return n3.length===3&&n3.every(Boolean)?{tri:n3}:null}
+ const n=normNote(e,T);if(n){if(e.len===2)n.len=2;if(ARTS.includes(e.a))n.a=e.a}return n};
+const normBar=(b,T)=>{const o=b.map(e=>normEv(e,T));o.forEach((e,k)=>{if(e&&e.tri&&k+1<o.length)o[k+1]=null});return o};
+// accepts the current format (sections) and the older ones (one progression; bars as plain chords, no key)
+function setState(d){
+ const bars=p=>{const o=p.map(b=>(Array.isArray(b)?b:[b]).slice(0,2).map(c=>{if(ci(c.r)<0||!CH[c.t])throw 0;return mk(c.r,c.t)}));if(o.length<2||o.length>12)throw 0;return o};
+ const raw=Array.isArray(d.secs)&&d.secs.length?d.secs.slice(0,6):[{n:'A',p:d.p,m:d.m}],used=new Set();
+ const secs=raw.map(x=>{let n=secName(x.n);if(!n||used.has(n.toLowerCase()))n='ABCDEFGHIJKL'.split('').find(c=>!used.has(c.toLowerCase()));used.add(n.toLowerCase());return{n,p:bars(x.p),m:x.m,k:null}}),p=secs[0].p;
+ if(SQ.playing)SQ.stop();
+ SQ.secs=secs;SQ.cs=Math.max(0,Math.min(secs.length-1,d.cs|0));SQ.order=(Array.isArray(d.ord)?d.ord:[]).filter(i=>Number.isInteger(i)&&i>=0&&i<secs.length).slice(0,32);if(!SQ.order.length)SQ.order=[SQ.cs];SQ.oi=0;SQ.songMode=!!d.sm;
+ SQ.bpm=clampBpm(d.b);SQ.groove=GR[d.g]?d.g:'rock';SQ.key=d.ky&&ci(d.ky.r)>=0?{r:d.ky.r,m:d.ky.m==='min'?'min':'maj'}:guessKey(p);SQ.sel=0;
+ if(d.mix)for(const k in MIX)if(d.mix[k]){MIX[k].v=Math.max(0,Math.min(1,+d.mix[k].v||0));MIX[k].m=!!d.mix[k].m}
+ if(d.o){OPT.names=['auto','sharp','flat'].includes(d.o.names)?d.o.names:'auto';OPT.h=!!d.o.h;OPT.lang=d.o.lang==='en'?'en':'sk'}
+ if(TUN[d.t])FB.tun=d.t;if('cp' in d)FB.capo=Math.max(0,Math.min(7,+d.cp||0));if('lh' in d)FB.left=!!d.lh;if('arp' in d)FB.arp=['all','C','A','G','E','D'].includes(d.arp)?d.arp:'';
+ if(Array.isArray(d.pr)&&d.pr.length===7){['lpa','lpb','spinc','spev','spmax'].forEach((id,i)=>$(id).value=parseInt(d.pr[i])||$(id).value);$('lpon').checked=!!d.pr[5];$('spon').checked=!!d.pr[6]}if(ci(d.fr)>=0)FB.root=d.fr;if(SC[d.fs])FB.scale=d.fs;if('fx' in d)FB.box=Math.max(0,Math.min(5,+d.fx||0));if(['notes','int','dots'].includes(d.fm))FB.mode=d.fm;
+ if(['pent','lyric','blues'].includes(d.s))$('mstyle').value=d.s;if(['ac','mute','clean','dist','flute','epiano'].includes(d.ms))SQ.msound=d.ms;
+ if('cnt' in d)$('cnt').checked=!!d.cnt;if('lock' in d)$('lock').checked=!!d.lock;if('as' in d)$('autosync').checked=!!d.as;if('vol' in d)$('vol').value=d.vol;
+ const E=S()/2,T=tuning();forSecs(()=>{const m=SQ.mel;if(Array.isArray(m)&&m.length===SQ.prog.length&&m.every(b=>Array.isArray(b)&&b.length===E)){SQ.mel=m.map(b=>normBar(b,T));SQ.melKey=SQ.prog.map(mkey)}else{SQ.mel=null;genMel(true)}});
+ syncUI()}
+const BLACK=[1,3,6,8,10];
+function fillRoots(){['root','eroot','eroot2','kroot'].forEach(id=>{const s=$(id);N.forEach((n,i)=>{if(!s.options[i])s.add(new Option(n,n));s.options[i].text=BLACK.includes(i)?nm(i,false)+' / '+nm(i,true):nm(i,false)})})}
+function drawMix(){$('mix').innerHTML=Object.keys(TR).map(k=>`<div class="flex items-center gap-2"><button data-mute="${k}" aria-pressed="${!MIX[k].m}" class="w-20 px-2 py-1 rounded border font-semibold ${MIX[k].m?'bg-s7 border-s6 text-slate-500 line-through':'bg-emerald-500/20 border-emerald-500/50 text-emerald-200'}">${L(TR[k])}</button><input type="range" data-vol="${k}" aria-label="${L('Hlasitosť')}: ${L(TR[k])}" min="0" max="1" step=".05" value="${MIX[k].v}" class="w-20 accent-emerald-400"></div>`).join('')}
+// redraws everything that shows note or chord names
+function redraw(){fillRoots();TN.strings();FB.render();SQ.drawBars();drawTab();SQ.suggest(SQ.prog[SQ.sel][0])}
+function syncUI(){applyLang();$('bpm').value=SQ.bpm;$('groove').value=SQ.groove;$('tun').value=FB.tun;$('box').value=FB.box;$('lab').value=FB.mode;$('names').value=OPT.names;$('hname').checked=OPT.h;$('msound').value=SQ.msound;$('capo').value=FB.capo;$('left').checked=FB.left;$('arp').value=FB.arp;
+ fillRoots();$('root').value=FB.root;$('scale').value=FB.scale;$('kroot').value=SQ.key.r;$('kmode').value=SQ.key.m;
+ SQ.shown=SQ.cs;drawSecs();drawMix();A.mix();drawBeats();edSync();redraw()}
+let SLOTS=LS.get('lg_slots')||{};
+function drawSlots(sel){const s=$('slots');s.innerHTML='';const ks=Object.keys(SLOTS);if(!ks.length)s.add(new Option(L('— nič uložené —'),''));ks.forEach(k=>s.add(new Option(k,k)));if(sel)s.value=sel}
+let saveT;const touch=()=>{clearTimeout(saveT);saveT=setTimeout(()=>LS.set('lg_auto',full()),400)};
+
+/* ---------- WIRING ---------- */
+// (re)builds every list whose entries are translated, keeping the current selection
+function fillLists(){const fill=(id,items)=>{const s=$(id),v=s.value;s.innerHTML='';items.forEach(([k,x])=>s.add(new Option(x,k)));if(v)s.value=v};
+ fill('scale',Object.entries(SC).map(([k,v])=>[k,L(v[0])]));
+ ['etype','etype2'].forEach(id=>fill(id,['maj','m','7','maj7','m7','m7b5','dim7','sus4','9','m9','13','7alt'].map(k=>[k,CH[k][0]||L('dur')])));
+ fill('groove',Object.entries(GR).map(([k,v])=>[k,L(v.n)]));
+ fill('capo',Array.from({length:8},(_,i)=>[i,i?(OPT.lang==='en'?'fret '+i:i+'. pražec'):L('bez kapodastra')]));
+ $('presets').innerHTML=Object.entries(PRE).map(([k,p])=>`<button data-p="${k}" class="w-full text-left p-3 rounded-xl bg-s9 border border-s7 hover:border-slate-500"><div class="font-bold text-sm text-amber-400">${L(p.n)}</div><div class="text-xs text-slate-400">${p.d} · ${L(GR[p.g].n)} · ${p.bpm} BPM</div></button>`).join('')}
+function applyLang(){document.documentElement.lang=OPT.lang;$('lang').textContent=OPT.lang==='en'?'SK':'EN';i18n();fillLists();SQ.btns();TN.ui();drawSlots($('slots').value);
+ if(QZ.asked){QZ.text();[...$('qans').children].forEach(b=>b.textContent=L(INT[b.dataset.iv-1]))}}
+$('lang').onclick=()=>{OPT.lang=OPT.lang==='en'?'sk':'en';syncUI()};
+$('presets').onclick=e=>{const b=e.target.closest('button');if(!b)return;const p=PRE[b.dataset.p],om=meter();SQ.prog=preBars(p);SQ.bpm=p.bpm;SQ.groove=p.g;SQ.key={r:p.k[0],m:p.k[1]};SQ.sel=0;SQ.bar=0;SQ.step=0;$('bpm').value=p.bpm;$('groove').value=p.g;$('kroot').value=p.k[0];$('kmode').value=p.k[1];drawBeats();edSync();meter()!==om?genAll(true):genMel(true);redraw();toast('Preset: '+L(p.n))};
+$('bpm').onchange=e=>{e.target.value=SQ.bpm=clampBpm(e.target.value)};
+$('vol').oninput=e=>{if(A.out)A.out.gain.setTargetAtTime(+e.target.value,A.ctx.currentTime,.05)};
+$('play').onclick=()=>SQ.toggle(false);$('met').onclick=()=>SQ.toggle(true);
+$('groove').onchange=e=>{const old=meter();SQ.groove=e.target.value;drawBeats();if(meter()!==old){SQ.step=0;genAll(true)}};
+$('mix').onclick=e=>{const b=e.target.closest('[data-mute]');if(!b)return;MIX[b.dataset.mute].m=!MIX[b.dataset.mute].m;drawMix();A.mix()};
+$('mix').oninput=e=>{const k=e.target.dataset.vol;if(k){MIX[k].v=+e.target.value;A.mix()}};
+$('addbar').onclick=()=>{if(SQ.prog.length>=12)return toast(L('Maximum je 12 taktov'));SQ.prog.push(SQ.prog[SQ.prog.length-1].map(c=>({...c})));genMel();SQ.drawBars()};
+$('rembar').onclick=()=>{if(SQ.prog.length<=2)return toast(L('Minimum sú 2 takty'));SQ.prog.pop();SQ.bar%=SQ.prog.length;SQ.sel=Math.min(SQ.sel,SQ.prog.length-1);edSync();genMel();SQ.drawBars()};
+$('e2on').onchange=e=>{$('eroot2').disabled=$('etype2').disabled=!e.target.checked};
+$('eapply').onclick=()=>{const b=[mk($('eroot').value,$('etype').value)];if($('e2on').checked)b.push(mk($('eroot2').value,$('etype2').value));SQ.prog[SQ.sel]=b;genMel();SQ.drawBars();SQ.suggest(b[0])};
+$('root').onchange=$('scale').onchange=()=>setScale($('root').value,$('scale').value);
+$('box').onchange=e=>{FB.box=+e.target.value;FB.render()};
+$('lab').onchange=e=>{FB.mode=e.target.value;FB.render()};
+$('tun').onchange=e=>{FB.tun=e.target.value;TN.strings();FB.render();genAll(true);SQ.drawBars()};
+$('capo').onchange=e=>{FB.capo=+e.target.value;FB.render();genAll(true);SQ.drawBars();if(QZ.on)QZ.next()};
+$('left').onchange=e=>{FB.left=e.target.checked;FB.render();drawDias()};
+$('arp').onchange=e=>{FB.arp=e.target.value;FB.chord=null;SQ.suggest(SQ.prog[SQ.sel][0]);FB.render()};
+['lpon','lpa','lpb'].forEach(id=>$(id).onchange=()=>SQ.drawBars());
+$('names').onchange=e=>{OPT.names=e.target.value;redraw()};
+$('hname').onchange=e=>{OPT.h=e.target.checked;redraw()};
+const tab=k=>{['scales','backing','quiz','tuner'].forEach(x=>{$('t-'+x).classList.toggle('hidden',x!==k)});if(k!=='tuner')TN.stop();QZ.on=k==='quiz';if(QZ.on&&!QZ.asked)QZ.next();else FB.render();document.querySelectorAll('#tabs button').forEach(b=>b.className='px-4 py-2 text-sm font-semibold rounded-lg '+(b.dataset.tab===k?'bg-emerald-500 text-slate-950':'text-slate-300'))};
+$('tabs').onclick=e=>{const b=e.target.closest('button');if(b)tab(b.dataset.tab)};
+addEventListener('keydown',e=>{if(ED.on&&!QZ.on&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!$('t-backing').classList.contains('hidden')&&!['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName)&&ED.key(e)){e.preventDefault();return}
+ if(e.code==='Space'&&!['INPUT','SELECT','BUTTON','TEXTAREA'].includes(e.target.tagName)){e.preventDefault();SQ.toggle(SQ.playing&&SQ.metOnly)}});
+let taps=[];$('tap').onclick=()=>{const n=Date.now();if(taps.length&&n-taps[taps.length-1]>2000)taps=[];taps.push(n);taps=taps.slice(-5);if(taps.length>1){const v=clampBpm(Math.round(60000/((taps[taps.length-1]-taps[0])/(taps.length-1))));SQ.bpm=v;$('bpm').value=v}};
+// transposing moves the key with the chords, so the degrees stay the same
+const tp=d=>{SQ.secs.forEach(x=>x.p=x.p.map(b=>b.map(c=>mk(cn(ci(c.r)+d),c.t))));SQ.key.r=cn(ci(SQ.key.r)+d);$('kroot').value=SQ.key.r;edSync();genAll(true);redraw()};
+$('trm').onclick=()=>{tp(-1);toast(L('Tónina −½ tónu'))};$('trp').onclick=()=>{tp(1);toast(L('Tónina +½ tónu'))};
+$('kroot').onchange=e=>tp(ci(e.target.value)-ci(SQ.key.r));
+$('kmode').onchange=e=>{SQ.key.m=e.target.value;redraw()};
+const degApply=()=>{try{const p=parseDeg($('degs').value);if(p.length<2||p.length>12)return toast(L('Postupnosť musí mať 2 až 12 taktov'));SQ.prog=p;SQ.sel=0;SQ.bar%=p.length;edSync();genMel(true);$('degs').blur();redraw();toast(L('Postupnosť nastavená'))}catch(x){toast(L('Nerozumiem stupňu: ')+x)}};
+$('degapply').onclick=degApply;$('degs').onkeydown=e=>{if(e.key==='Enter')degApply()};
+$('svp').onclick=()=>{const n=$('sname').value.trim()||$('slots').value;if(!n)return toast(L('Zadaj názov'));SLOTS[n]=song();if(!LS.set('lg_slots',SLOTS))return toast(L('Ukladanie nie je dostupné'));$('sname').value='';drawSlots(n);toast(L('Uložené: ')+n)};
+$('ldp').onclick=()=>{const d=SLOTS[$('slots').value];if(!d)return toast(L('Nič nie je uložené'));try{setState(d);toast(L('Načítané: ')+$('slots').value)}catch(e){toast(L('Načítanie zlyhalo'))}};
+$('dlp').onclick=()=>{const n=$('slots').value;if(!SLOTS[n])return toast(L('Nič nie je uložené'));delete SLOTS[n];LS.set('lg_slots',SLOTS);drawSlots();toast(L('Zmazané: ')+n)};
+$('msound').onchange=e=>{SQ.msound=e.target.value;A.resume();A.mel(64,A.ctx.currentTime,.9,.55)};
+$('newmel').onclick=()=>genMel(true);$('mstyle').onchange=()=>genAll(true);
+
+/* ---------- SONG SECTIONS ---------- */
+const secName=n=>String(n==null?'':n).replace(/[^\p{L}\p{N}_-]/gu,'').slice(0,12);
+function drawSecs(){$('secs').innerHTML=SQ.secs.map((x,i)=>`<button data-i="${i}" class="px-3 py-1 rounded font-bold border ${i===SQ.cs?'bg-emerald-500 text-slate-950 border-emerald-400':'bg-s7 border-s6 text-slate-200'}">${x.n}</button>`).join('');
+ $('secname').value=SQ.secs[SQ.cs].n;$('songmode').checked=SQ.songMode;if(document.activeElement!==$('ord'))$('ord').value=SQ.order.map(i=>SQ.secs[i].n).join(' ')}
+// shows the current section (or section i) in the bar list, editor and tablature
+function showSec(i){if(i!=null)SQ.cs=i;SQ.shown=SQ.cs;SQ.sel=Math.min(SQ.sel,SQ.prog.length-1);drawSecs();edSync();SQ.drawBars();drawTab();if(!SQ.playing)SQ.suggest(SQ.prog[SQ.sel][0])}
+$('secs').onclick=e=>{const b=e.target.closest('button');if(b)showSec(+b.dataset.i)};
+$('secadd').onclick=()=>{if(SQ.secs.length>=6)return toast(L('Maximum je 6 častí'));const c=SQ.secs[SQ.cs],n='ABCDEF'.split('').find(x=>!SQ.secs.some(y=>y.n.toLowerCase()===x.toLowerCase()));
+ SQ.secs.push({n,p:JSON.parse(JSON.stringify(c.p)),m:JSON.parse(JSON.stringify(c.m)),k:c.k.slice()});showSec(SQ.secs.length-1)};
+$('secdel').onclick=()=>{if(SQ.secs.length<2)return toast(L('Musí ostať aspoň jedna časť'));const c=SQ.cs;SQ.secs.splice(c,1);SQ.order=SQ.order.filter(i=>i!==c).map(i=>i>c?i-1:i);SQ.cs=Math.min(c,SQ.secs.length-1);if(!SQ.order.length)SQ.order=[SQ.cs];SQ.oi=0;SQ.bar=0;showSec()};
+$('secname').onchange=e=>{const n=secName(e.target.value);if(!n||SQ.secs.some((x,i)=>i!==SQ.cs&&x.n.toLowerCase()===n.toLowerCase()))toast(L('Názov je prázdny alebo už existuje'));else SQ.secs[SQ.cs].n=n;drawSecs()};
+$('ord').onchange=e=>{const o=[];for(const w of e.target.value.trim().split(/[\s,]+/).filter(Boolean)){const i=SQ.secs.findIndex(x=>x.n.toLowerCase()===w.toLowerCase());if(i<0){toast(L('Neznáma časť: ')+w);e.target.blur();return drawSecs()}o.push(i)}
+ SQ.order=o.length?o.slice(0,32):[SQ.cs];SQ.oi=0;e.target.blur();drawSecs()};
+$('songmode').onchange=e=>{SQ.songMode=e.target.checked;SQ.drawBars()};
+
+/* ---------- SHARING: the song packed into the address after #s= ---------- */
+const b64e=s=>{let b='';new TextEncoder().encode(s).forEach(c=>b+=String.fromCharCode(c));return btoa(b).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')};
+const b64d=c=>new TextDecoder().decode(Uint8Array.from(atob(c.replace(/-/g,'+').replace(/_/g,'/')),x=>x.charCodeAt(0)));
+const packEv=e=>!e?0:e.tri?[e.tri.map(n=>[n.s,n.f])]:[e.s,e.f,e.len===2?1:0,e.a||''];
+const unpackEv=x=>!Array.isArray(x)?null:Array.isArray(x[0])?{tri:x[0].map(n=>({s:n[0],f:n[1]}))}:{s:x[0],f:x[1],len:x[2]?2:1,a:x[3]};
+const shareCode=()=>b64e(JSON.stringify({v:3,b:SQ.bpm,g:SQ.groove,ky:[SQ.key.r,SQ.key.m],s:$('mstyle').value,ms:SQ.msound,t:FB.tun,cp:FB.capo,sm:+SQ.songMode,ord:SQ.order,cs:SQ.cs,
+ secs:SQ.secs.map(x=>({n:x.n,p:x.p.map(b=>b.map(c=>[ci(c.r),c.t])),m:x.m.map(b=>b.map(packEv))}))}));
+// takes a whole link or just the code; only song fields are read, everything is validated again by setState
+function openShare(v){const d=JSON.parse(b64d(v.trim().replace(/^.*#s=/,'')));
+ setState({b:d.b,g:d.g,ky:{r:d.ky[0],m:d.ky[1]},s:d.s,ms:d.ms,t:d.t,cp:d.cp,sm:d.sm,ord:d.ord,cs:d.cs,
+  secs:d.secs.map(x=>({n:x.n,p:x.p.map(b=>b.map(c=>({r:cn(c[0]|0),t:c[1]}))),m:x.m.map(b=>b.map(unpackEv))}))})}
+$('share').onclick=async()=>{const url=location.href.split('#')[0]+'#s='+shareCode();$('linkin').value=url;try{await navigator.clipboard.writeText(url);toast(L('Odkaz skopírovaný'))}catch(e){$('linkin').select();toast(L('Odkaz je v poli, skopíruj ho'))}};
+$('linkgo').onclick=()=>{const v=$('linkin').value.trim();if(!v)return toast(L('Vlož odkaz alebo kód'));try{openShare(v);$('linkin').value='';toast(L('Odkaz načítaný'))}catch(e){toast(L('Odkaz sa nepodarilo načítať'))}};
+const fromHash=()=>{const h=location.hash.match(/^#s=(.+)/);if(!h)return;try{openShare(h[1]);toast(L('Odkaz načítaný'))}catch(e){toast(L('Odkaz sa nepodarilo načítať'))}try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}};
+addEventListener('hashchange',fromHash);
+
+// start: restore the autosaved state, otherwise the defaults; the old single save becomes a slot
+const old=LS.get('fm1');if(old&&!Object.keys(SLOTS).length){SLOTS['Uložené']=old;LS.set('lg_slots',SLOTS)}
+drawSlots();
+try{setState(LS.get('lg_auto'))}catch(e){genMel(true);syncUI()}
+fromHash();   // a shared link wins over the autosaved state
+tab('scales');
+document.addEventListener('change',touch);document.addEventListener('click',touch);addEventListener('pagehide',()=>LS.set('lg_auto',full()));
+</script>
+</body>
+</html>

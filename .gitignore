@@ -1,0 +1,5 @@
+.DS_Store
+node_modules/
+# other projects kept in this folder, not part of LubenoGuitar
+FretMaster*
+WEB/
