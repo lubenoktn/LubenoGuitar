@@ -23,6 +23,7 @@ button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid 
 .grp[open]>summary::before{transform:rotate(90deg)}
 /* touch screens: larger tap areas (the fret dots keep their size, only the area grows) and no zoom-in on focus */
 .nb{position:relative}
-@media (pointer:coarse){.nb::after{content:'';position:absolute;inset:-9px}button:not(.nb){min-height:36px}input,select,textarea{font-size:16px}}
+a.help{position:relative}
+@media (pointer:coarse){.nb::after,a.help::after{content:'';position:absolute;inset:-9px}button:not(.nb),#help{min-height:36px}input,select,textarea{font-size:16px}}
 /* phone held sideways: a lower fretboard so all six strings fit under the header */
 @media (max-height:500px){#fb .h-11{height:2rem}}

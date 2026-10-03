@@ -5,6 +5,7 @@ export const EN = {
   'Spustiť sprievod': 'Play backing',
   Zastaviť: 'Stop',
   Inštalovať: 'Install',
+  Pomocník: 'Help',
   Presety: 'Presets',
   '↶ Späť': '↶ Undo',
   'Krok späť už nie je možný': 'This step can no longer be undone',

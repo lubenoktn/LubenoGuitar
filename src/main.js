@@ -37,6 +37,7 @@ import { QZ } from './ui/quiz.js';
 import { fromHash } from './ui/share.js';
 import { ED, snap, undo } from './ui/tab.js';
 import { initPwa } from './pwa.js';
+import { helpLinks } from './help.js';
 import { TN } from './ui/tuner.js';
 
 // (re)builds every list whose entries are translated, keeping the current selection
@@ -80,6 +81,7 @@ export function fillLists() {
     .join('');
 }
 export function applyLang() {
+  helpLinks();
   document.documentElement.lang = OPT.lang;
   $('lang').textContent = OPT.lang === 'en' ? 'SK' : 'EN';
   i18n();

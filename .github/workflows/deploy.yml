@@ -27,7 +27,7 @@ jobs:
       - run: npm test
       - run: npm run build
       # the published site: the built app plus public/ (short-address forwarder, manifest, service worker, icons)
-      - run: mkdir _site && cp LubenoGuitar.html _site/ && cp -r public/. _site/
+      - run: mkdir _site && cp LubenoGuitar.html manual.html _site/ && cp -r public/. _site/
       - if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:

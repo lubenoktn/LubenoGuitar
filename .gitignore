@@ -3,6 +3,7 @@ node_modules/
 .claude/
 # build output: created by `npm run build`, published by the GitHub workflow
 /LubenoGuitar.html
+/manual.html
 _site/
 # other projects kept in this folder, not part of LubenoGuitar
 FretMaster*

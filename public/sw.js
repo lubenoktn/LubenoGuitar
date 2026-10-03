@@ -1,9 +1,10 @@
 // Service worker: keeps a copy of the app so it opens without a connection.
 // Online, the network copy is always used and refreshes the cache, so updates arrive on the next load.
-const CACHE = 'lubenoguitar-v1';
+const CACHE = 'lubenoguitar-v2';
 const FILES = [
   './',
   'LubenoGuitar.html',
+  'manual.html',
   'index.html',
   'manifest.webmanifest',
   'icon-192.png',

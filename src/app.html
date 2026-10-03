@@ -13,6 +13,7 @@
   <div class="hidden sm:block"><h1 class="text-xl font-extrabold text-amber-400">LubenoGuitar</h1><p class="text-xs text-slate-400">Stupnice, sprievod a melódie</p></div>
   <div class="flex items-center gap-2 flex-wrap">
    <button id="install" class="hidden px-2 py-1 text-xs font-bold rounded bg-amber-500 text-slate-950">Inštalovať</button>
+   <a id="help" data-help="" aria-label="Pomocník" class="inline-flex items-center px-2.5 py-1 text-xs font-bold rounded bg-s7 border border-s6">?</a>
    <button id="lang" aria-label="Jazyk / Language" class="px-2 py-1 text-xs font-bold rounded bg-s7 border border-s6">EN</button>
    <div id="beats" class="flex items-center gap-1" aria-hidden="true"></div>
    <button id="play" class="px-4 py-2 rounded-xl font-semibold bg-emerald-500 text-slate-950">▶<span class="hidden sm:inline"> Spustiť sprievod</span></button>
@@ -63,7 +64,7 @@
     <div><h2 class="font-bold">Vlastná postupnosť</h2><p class="text-xs text-slate-400">Vyber takt a zmeň akord (2 až 12 taktov)</p></div>
     <div class="flex gap-2"><button id="addbar" class="whitespace-nowrap px-3 py-1 text-xs font-bold rounded-lg bg-s7 border border-s6">+ Takt</button><button id="rembar" class="whitespace-nowrap px-3 py-1 text-xs font-bold rounded-lg bg-s7 border border-s6 text-rose-300">− Takt</button></div>
    </div>
-   <details class="grp bg-s9 border border-s7 rounded-xl p-3"><summary class="text-xs font-bold text-slate-300">Časti piesne</summary><div class="mt-2 space-y-2 text-xs text-slate-300">
+   <details class="grp bg-s9 border border-s7 rounded-xl p-3"><summary class="text-xs font-bold text-slate-300">Časti piesne<a data-help="sections" aria-label="Pomocník" class="help inline-flex items-center justify-center w-5 h-5 shrink-0 rounded-full border border-s6 text-[10px] font-bold text-slate-400 hover:text-white no-underline">?</a></summary><div class="mt-2 space-y-2 text-xs text-slate-300">
     <div class="flex flex-wrap items-center gap-2"><div id="secs" class="flex flex-wrap gap-1"></div>
      <button id="secadd" class="px-2 py-1 rounded bg-s7 border border-s6">+ Časť</button><button id="secdel" class="px-2 py-1 rounded bg-s7 border border-s6 text-rose-300">− Časť</button>
      <label class="flex items-center gap-1 ml-auto">Názov <input id="secname" aria-label="Názov časti" maxlength="12" class="w-24 bg-s8 border border-s6 rounded px-2 py-1"></label></div>
@@ -72,7 +73,7 @@
     <p class="text-[11px] text-slate-500">Každá časť má vlastné takty a melódiu. Poradie zapíš názvami častí oddelenými medzerou, napr. A A B A. Bez zaškrtnutia sa opakuje len zobrazená časť.</p>
    </div></details>
    <div class="bg-s9 border border-s7 rounded-xl p-3 flex flex-wrap items-center gap-2 text-xs text-slate-400">
-    <span>Tónina</span>
+    <span>Tónina</span><a data-help="degrees" aria-label="Pomocník" class="help inline-flex items-center justify-center w-5 h-5 shrink-0 rounded-full border border-s6 text-[10px] font-bold text-slate-400 hover:text-white no-underline">?</a>
     <select id="kroot" aria-label="Tónina" class="bg-s8 border border-s6 rounded px-2 py-1 font-bold text-amber-300"></select>
     <select id="kmode" aria-label="Tónorod" class="bg-s8 border border-s6 rounded px-2 py-1 font-bold text-emerald-300"><option value="maj">dur</option><option value="min">mol</option></select>
     <input id="degs" aria-label="Postupnosť v stupňoch" placeholder="I V vi IV" class="flex-1 min-w-[10rem] bg-s8 border border-s6 rounded px-2 py-1 font-mono text-cyan-300">
@@ -95,16 +96,16 @@
     <label><input type="checkbox" id="cnt" class="accent-emerald-500"> predtakt</label>
     <button id="trm" class="px-2 py-1 rounded bg-s7 border border-s6">Tónina −½</button><button id="trp" class="px-2 py-1 rounded bg-s7 border border-s6">Tónina +½</button>
    </div>
-   <details class="grp p-3 rounded-xl bg-s9 border border-s7"><summary class="text-xs font-bold text-slate-300">Cvičenie</summary><div class="mt-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-300">
+   <details class="grp p-3 rounded-xl bg-s9 border border-s7"><summary class="text-xs font-bold text-slate-300">Cvičenie<a data-help="practice" aria-label="Pomocník" class="help inline-flex items-center justify-center w-5 h-5 shrink-0 rounded-full border border-s6 text-[10px] font-bold text-slate-400 hover:text-white no-underline">?</a></summary><div class="mt-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-300">
 
     <div class="flex items-center gap-1"><label class="flex items-center gap-1"><input type="checkbox" id="lpon" class="accent-emerald-500"> slučka od taktu</label><input id="lpa" aria-label="Slučka od taktu" type="number" min="1" max="12" value="1" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"> po <input id="lpb" aria-label="Slučka po takt" type="number" min="1" max="12" value="4" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"></div>
     <div class="flex flex-wrap items-center gap-1"><label class="flex items-center gap-1"><input type="checkbox" id="spon" class="accent-emerald-500"> zrýchliť o</label><input id="spinc" aria-label="O koľko BPM zrýchliť" type="number" min="1" max="20" value="2" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"> BPM každé <input id="spev" aria-label="Po koľkých kolách zrýchliť" type="number" min="1" max="16" value="2" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"> kolá, najviac po <input id="spmax" aria-label="Najvyššie tempo" type="number" min="40" max="240" value="160" class="w-12 bg-s8 border border-s6 rounded px-1 py-0.5 text-center text-amber-300"> BPM</div>
    </div></details>
-   <details class="grp p-3 rounded-xl bg-s9 border border-s7"><summary class="text-xs font-bold text-slate-300">Mix stôp <span class="font-normal text-slate-500">(klik na názov stopu stlmí)</span></summary><div class="mt-2 ">
+   <details class="grp p-3 rounded-xl bg-s9 border border-s7"><summary class="text-xs font-bold text-slate-300">Mix stôp <span class="font-normal text-slate-500">(klik na názov stopu stlmí)</span><a data-help="mix" aria-label="Pomocník" class="help inline-flex items-center justify-center w-5 h-5 shrink-0 rounded-full border border-s6 text-[10px] font-bold text-slate-400 hover:text-white no-underline">?</a></summary><div class="mt-2 ">
 
     <div id="mix" class="flex flex-wrap gap-x-4 gap-y-2 text-xs"></div>
    </div></details>
-   <details class="grp p-3 rounded-xl bg-s9 border border-s7"><summary class="text-xs font-bold text-slate-300">Uložené postupnosti</summary><div class="mt-2 flex flex-wrap items-center gap-2 text-xs text-slate-300">
+   <details class="grp p-3 rounded-xl bg-s9 border border-s7"><summary class="text-xs font-bold text-slate-300">Uložené postupnosti<a data-help="slots" aria-label="Pomocník" class="help inline-flex items-center justify-center w-5 h-5 shrink-0 rounded-full border border-s6 text-[10px] font-bold text-slate-400 hover:text-white no-underline">?</a></summary><div class="mt-2 flex flex-wrap items-center gap-2 text-xs text-slate-300">
 
     <input id="sname" aria-label="Názov na uloženie" placeholder="Názov" maxlength="30" class="w-32 bg-s8 border border-s6 rounded px-2 py-1">
     <button id="svp" class="px-2 py-1 rounded bg-s7 border border-s6">Uložiť</button>
@@ -114,9 +115,9 @@
     <div class="w-full flex flex-wrap items-center gap-2"><button id="share" class="px-2 py-1 rounded bg-s7 border border-s6">Zdieľať odkaz</button><input id="linkin" aria-label="Vlož odkaz alebo kód" placeholder="Vlož odkaz alebo kód" class="flex-1 min-w-[8rem] bg-s8 border border-s6 rounded px-2 py-1"><button id="linkgo" class="px-2 py-1 rounded bg-s7 border border-s6">Otvoriť odkaz</button></div>
     <p class="w-full text-[11px] text-slate-500">Rozpracovaný stav sa ukladá automaticky a po otvorení sa obnoví.</p>
    </div></details>
-   <div class="p-3 rounded-xl bg-s9 border border-s7 space-y-2"><div class="flex flex-wrap items-center gap-2 text-xs text-slate-300"><b>Melódia</b><select id="mstyle" class="bg-s8 border border-s6 rounded px-2 py-1"><option value="pent">Pentatonika</option><option value="lyric">Spevná linka</option><option value="blues">Blues</option></select><select id="msound" aria-label="Zvuk melódie" class="bg-s8 border border-s6 rounded px-2 py-1"><option value="ac">Akustická gitara</option><option value="mute">Tlmená gitara</option><option value="clean">Elektrická čistá</option><option value="dist">Elektrická skreslená</option><option value="flute">Flauta</option><option value="epiano">Elektrické piano</option></select><label><input type="checkbox" id="lock" class="accent-emerald-500"> zamknúť</label><button id="undo" disabled class="ml-auto px-3 py-1 bg-s7 border border-s6 rounded disabled:opacity-40">↶ Späť</button><button id="newmel" class="px-3 py-1 bg-emerald-500 text-slate-950 font-bold rounded">Nová melódia</button><button id="savetab" class="px-3 py-1 bg-s7 border border-s6 rounded">Uložiť tabulatúru (.txt)</button><button id="savemid" class="px-3 py-1 bg-s7 border border-s6 rounded">Uložiť MIDI (.mid)</button><button id="edbtn" class="px-3 py-1 rounded border bg-s7 border-s6">Upraviť melódiu</button></div>
+   <div class="p-3 rounded-xl bg-s9 border border-s7 space-y-2"><div class="flex flex-wrap items-center gap-2 text-xs text-slate-300"><b>Melódia</b><a data-help="melody" aria-label="Pomocník" class="help inline-flex items-center justify-center w-5 h-5 shrink-0 rounded-full border border-s6 text-[10px] font-bold text-slate-400 hover:text-white no-underline">?</a><select id="mstyle" class="bg-s8 border border-s6 rounded px-2 py-1"><option value="pent">Pentatonika</option><option value="lyric">Spevná linka</option><option value="blues">Blues</option></select><select id="msound" aria-label="Zvuk melódie" class="bg-s8 border border-s6 rounded px-2 py-1"><option value="ac">Akustická gitara</option><option value="mute">Tlmená gitara</option><option value="clean">Elektrická čistá</option><option value="dist">Elektrická skreslená</option><option value="flute">Flauta</option><option value="epiano">Elektrické piano</option></select><label><input type="checkbox" id="lock" class="accent-emerald-500"> zamknúť</label><button id="undo" disabled class="ml-auto px-3 py-1 bg-s7 border border-s6 rounded disabled:opacity-40">↶ Späť</button><button id="newmel" class="px-3 py-1 bg-emerald-500 text-slate-950 font-bold rounded">Nová melódia</button><button id="savetab" class="px-3 py-1 bg-s7 border border-s6 rounded">Uložiť tabulatúru (.txt)</button><button id="savemid" class="px-3 py-1 bg-s7 border border-s6 rounded">Uložiť MIDI (.mid)</button><button id="edbtn" class="px-3 py-1 rounded border bg-s7 border-s6">Upraviť melódiu</button></div>
     <div id="edbar" class="hidden flex flex-wrap items-center gap-3 text-xs text-slate-300 p-2 rounded-lg bg-s8 border border-amber-500/40">
-     <span id="edpos" class="font-mono text-amber-300"></span>
+     <span id="edpos" class="font-mono text-amber-300"></span><a data-help="edit" aria-label="Pomocník" class="help inline-flex items-center justify-center w-5 h-5 shrink-0 rounded-full border border-s6 text-[10px] font-bold text-slate-400 hover:text-white no-underline">?</a>
      <button id="eddel" class="px-2 py-1 rounded bg-s7 border border-s6 text-rose-300">Zmazať tón</button>
      <label>Technika <select id="edart" class="ml-1 bg-s9 border border-s6 rounded px-2 py-1 disabled:opacity-40"><option value="">žiadna</option><option value="h">h hammer-on</option><option value="p">p pull-off</option><option value="/">/ slide nahor</option><option value="\">\ slide nadol</option><option value="b">b ohyb</option></select></label>
      <label class="flex items-center gap-1"><input type="checkbox" id="edlen" class="accent-emerald-500"> dlhý tón (2 osminy)</label>
@@ -133,7 +134,7 @@
  <section id="t-quiz" class="hidden bg-s8 border border-s7 rounded-2xl p-4 space-y-3">
   <div class="flex flex-wrap items-center gap-3 text-xs text-slate-300">
    <label>Typ <select id="qmode" class="ml-1 bg-s9 border border-s6 rounded px-2 py-1"><option value="find">Nájdi tón</option><option value="int">Urči interval</option></select></label>
-   <button id="qnext" class="px-3 py-1 bg-emerald-500 text-slate-950 font-bold rounded">Ďalšia otázka</button>
+   <a data-help="quiz" aria-label="Pomocník" class="help inline-flex items-center justify-center w-5 h-5 shrink-0 rounded-full border border-s6 text-[10px] font-bold text-slate-400 hover:text-white no-underline">?</a><button id="qnext" class="px-3 py-1 bg-emerald-500 text-slate-950 font-bold rounded">Ďalšia otázka</button>
    <span class="ml-auto">Správne: <b id="qok" class="text-emerald-300">0</b> · Chyby: <b id="qbad" class="text-rose-300">0</b></span>
   </div>
   <p id="qtext" class="text-lg font-bold text-amber-400"></p>
@@ -142,7 +143,7 @@
  </section>
 
  <section id="t-tuner" class="hidden bg-s8 border border-s7 rounded-2xl p-4 space-y-4">
-  <div class="flex flex-wrap items-center gap-3"><button id="tunbtn" class="px-4 py-2 rounded-xl font-semibold bg-emerald-500 text-slate-950">Zapnúť mikrofón</button><span id="tunmsg" class="text-xs text-slate-400">Zahraj jednu strunu blízko mikrofónu.</span></div>
+  <div class="flex flex-wrap items-center gap-3"><button id="tunbtn" class="px-4 py-2 rounded-xl font-semibold bg-emerald-500 text-slate-950">Zapnúť mikrofón</button><a data-help="tuner" aria-label="Pomocník" class="help inline-flex items-center justify-center w-5 h-5 shrink-0 rounded-full border border-s6 text-[10px] font-bold text-slate-400 hover:text-white no-underline">?</a><span id="tunmsg" class="text-xs text-slate-400">Zahraj jednu strunu blízko mikrofónu.</span></div>
   <div class="text-center"><div id="tunnote" class="text-6xl font-extrabold text-slate-500">–</div><div id="tuncents" class="text-sm text-slate-400 h-5"></div></div>
   <div class="relative h-4 max-w-xl mx-auto rounded-full bg-s9 border border-s6"><div class="absolute top-0 bottom-0 left-1/2 w-px bg-slate-400"></div><div id="tunneedle" class="absolute -top-1 -bottom-1 w-1.5 -translate-x-1/2 rounded bg-slate-500" style="left:50%"></div></div>
   <div class="flex justify-between max-w-xl mx-auto text-[11px] text-slate-500"><span>−50 centov (nízko)</span><span>+50 centov (vysoko)</span></div>
