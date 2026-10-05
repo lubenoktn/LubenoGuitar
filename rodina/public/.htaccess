@@ -1,0 +1,15 @@
+Require all granted
+Options -Indexes
+
+# PHP running as CGI/FPM does not see the Authorization header without this.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_headers.c>
+<Files "sw.js">
+    Header set Cache-Control "no-cache"
+</Files>
+</IfModule>

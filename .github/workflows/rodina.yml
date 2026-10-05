@@ -1,0 +1,29 @@
+# Tests the Rodina app (rodina/: PHP API, SQLite, cron) when it changes.
+name: Rodina
+
+on:
+  push:
+    paths: ['rodina/**', '.github/workflows/rodina.yml']
+  pull_request:
+    paths: ['rodina/**', '.github/workflows/rodina.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: rodina
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: pdo_sqlite, curl, mbstring, openssl, gmp
+          tools: composer
+      - run: composer install --no-interaction --no-progress
+      - run: for f in public/api/*.php cron/*.php bin/*.php lib/*.php; do php -l "$f" >/dev/null || exit 1; done
+      - run: php tests/run.php

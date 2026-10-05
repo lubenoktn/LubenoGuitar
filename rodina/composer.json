@@ -1,0 +1,14 @@
+{
+    "name": "lubeno/rodina",
+    "description": "Family shopping lists and reminders: PWA + PHP API + SQLite",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "ext-pdo_sqlite": "*",
+        "minishlink/web-push": "^9.0"
+    },
+    "scripts": {
+        "test": "php tests/run.php"
+    }
+}
